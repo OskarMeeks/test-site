@@ -8,19 +8,19 @@
 
 var myJSON= {"myObject": {
 "JAVA": {
-    "id": "`",
+    "id": "q",
     "path": "json/data.json",
     "posx": 0,
     "posy": 0
 },
 "C#": { 
-    "id": "1",
+    "id": "w",
     "path": "json/data1.json",
     "posx": 1,
     "posy": 0
 },
 "C++": {
-   "id": "2",
+   "id": "e",
    "path": "json/data2.json",
    "posx": 2, 
    "posy": 0
