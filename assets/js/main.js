@@ -21,7 +21,7 @@ var myJSON= {"myObject": {
 },
 "C++": {
    "id": "2",
-   "path": "json/data2.json"
+   "path": "json/data2.json",
    "posx": 2, 
    "posy": 0
 }
