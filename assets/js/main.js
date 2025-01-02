@@ -6,6 +6,35 @@
 
 (function($) {
 
+	var jsonObj = {"myObject":
+ [
+    {
+     title: 'JAVA',
+     id: "JAVAsubj",
+     path: "json/data.json"
+    },
+    { 
+    title: "C#",
+    id: "JAVAsubj",
+    path: "json/data1.json"
+    },
+    {
+    title: "C++",
+    id: "JAVAsubj",
+    path: "json/data2.json"
+    }
+  ]
+}
+
+
+var count = Object.keys(jsonObj.myObject).length;
+var container= document.getElementById('buttons'); // reference to containing elm
+for(var i=0;i<count;i++){
+	var obj= jsonObj.myObject[i];
+	var button = "<input type='button' value="+obj.title+"></input>"
+	container.innerHTML+=button;
+}
+	
 	var	$window = $(window),
 		$body = $('body'),
 		$wrapper = $('#wrapper'),
