@@ -10,20 +10,20 @@ var myJSON= {"myObject": {
 "JAVA": {
     "id": "q",
     "path": "json/data.json",
-    "posx": 0,
-    "posy": 0
+    "posx": "0",
+    "posy": "0"
 },
 "C#": { 
     "id": "w",
     "path": "json/data1.json",
-    "posx": 1,
-    "posy": 0
+    "posx": "1",
+    "posy": "0"
 },
 "C++": {
    "id": "e",
    "path": "json/data2.json",
-   "posx": 2, 
-   "posy": 0
+   "posx": "2", 
+   "posy": "0"
 }
 }
 }
@@ -34,8 +34,8 @@ for (var key in dctLanguages)
 {
    var language = dctLanguages[key];
    strHTML += '<input type="button" id="'+language.id+'" value="'+key+'"/>';
-   strHTML.style.position.top = obj.posy * 15px; 
-   strHTML.style.position.top = obj.posx* 15px; 
+   strHTML.style.position.top = parseInt(language.posy) * 15px; 
+   strHTML.style.position.top = parseInt(language.posx)* 15px; 
 }
 	
 	var	$window = $(window),
