@@ -10,20 +10,20 @@ var myJSON= {"myObject": {
 "JAVA": {
     "id": "q",
     "path": "json/data.json",
-    "posx": "0",
-    "posy": "0"
+    "posx": "a0",
+    "posy": "a0"
 },
 "C#": { 
     "id": "w",
     "path": "json/data1.json",
-    "posx": "1",
-    "posy": "0"
+    "posx": "a1",
+    "posy": "a0"
 },
 "C++": {
    "id": "e",
    "path": "json/data2.json",
-   "posx": "2", 
-   "posy": "0"
+   "posx": "a2", 
+   "posy": "a0"
 }
 }
 }
