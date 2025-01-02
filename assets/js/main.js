@@ -36,8 +36,8 @@ for (var key in dctLanguages)
    var language = dctLanguages[key];
    var button ='<input type="button" id="'+language.id+'" value="'+key+'"/>';
    container.innerHTML+=button;
-   button.style.position.top = parseInt(language.posy); 
-   button.style.position.top = parseInt(language.posx); 
+   button.position.top = parseInt(language.posy); 
+   button.position.top = parseInt(language.posx); 
 }
 	
 	var	$window = $(window),
