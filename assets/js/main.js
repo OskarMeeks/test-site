@@ -37,7 +37,7 @@ for (var key in dctLanguages)
    var button ='<div class="key" id="'+language.id+'" value="'+key+'"/>';
    container.innerHTML+=button;
    button.top = "10px"; 
-   button.style.marginLeft = "80px"; //= parseInt(language.posx); 
+   button.marginLeft = "80px"; //= parseInt(language.posx); 
 }
 	
 	var	$window = $(window),
