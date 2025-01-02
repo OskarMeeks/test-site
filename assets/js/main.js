@@ -6,43 +6,36 @@
 
 (function($) {
 
-	var jsonObj = {"myObject":
- [
-    {
-     title: '`',
-     id: "`",
-     path: "json/data.json"
-     posx:0px,
-     posy:0px
-    },
-    { 
-    title: "1",
-    id: "1",
-    path: "json/data1.json"    
-    posx:1px,
-    posy:0px
-    },
-    {
-    title: "2",
-    id: "2",
-    path: "json/data2.json" 
-    posx:2px,
-    posy:0px
-    }
-  ]
+var myJSON= {"myObject": {
+"JAVA": {
+    "id": "`",
+    "path": "json/data.json",
+    "posx": 0,
+    "posy": 0
+},
+"C#": { 
+    "id": "1",
+    "path": "json/data1.json",
+    "posx": 1,
+    "posy": 0
+},
+"C++": {
+   "id": "2",
+   "path": "json/data2.json"
+   "posx": 2, 
+   "posy": 0
+}
+}
 }
 
 
-var count = Object.keys(jsonObj.myObject).length;
-var container= document.getElementById('buttons'); // reference to containing elm
-for(var i=0;i<count;i++){
-	var obj= jsonObj.myObject[i];
-	var button = "<input type='button' class ='keys' value="+obj.title+"></input>"
-	container.innerHTML+=button;
-
-	button.style.position.top = obj.posy * 15; 
-	button.style.position.top = obj.posx* 15; 
-
+var dctLanguages = myJSON["myObject"];
+for (var key in dctLanguages)
+{
+   var language = dctLanguages[key];
+   strHTML += '<input type="button" id="'+language.id+'" value="'+key+'"/>';
+   strHTML.style.position.top = obj.posy * 15px; 
+   strHTML.style.position.top = obj.posx* 15px; 
 }
 	
 	var	$window = $(window),
