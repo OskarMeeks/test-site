@@ -34,7 +34,7 @@ var container= document.getElementById('buttons');
 for (var key in dctLanguages)
 {
    var language = dctLanguages[key];
-   var button ='<input type="button" id="'+language.id+'" value="'+key+'"/>';
+   var button ='<div id="'+language.id+'" value="'+key+'"/>';
    container.innerHTML+=button;
    button.top = parseInt(language.posy); 
    button.left = parseInt(language.posx); 
