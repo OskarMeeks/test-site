@@ -1,4 +1,4 @@
-function myFunction(p1) {
+function myFunction() {
 var myJSON= {"myObject": {
 "JAVA": {
     "id": "q",
