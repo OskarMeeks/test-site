@@ -30,6 +30,8 @@
 	 * Applies parallax scrolling to an element's background image.
 	 * @return {jQuery} jQuery object.
 	 */
+	 alert("let's go!");
+	
 	$.fn._parallax = function(intensity) {
 
 		var	$window = $(window),
