@@ -20,7 +20,7 @@ var myJSON= {"myObject": {
 }
 }
 }
-
+	 alert("let's go!");
 
   var dctLanguages = myJSON["myObject"];
   var container= document.getElementById('buttons');
