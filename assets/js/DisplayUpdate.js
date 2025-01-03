@@ -30,7 +30,7 @@ var myJSON= {"myObject": {
      var language = dctLanguages[key];
        var button ='<div class="key" id="'+language.id+'" value="'+key+'"/>';
 	  
-	var sample = document.getElementById("'+language.id+'"); // using var
+	var sample = document.getElementById(language.id.toString()); // using var
 	sample.style.top = "10px"; // Changes color, adds style property.
 	  
   //   button.top = "10px"; 
