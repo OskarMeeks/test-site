@@ -29,8 +29,9 @@ var myJSON= {"myObject": {
   {
      var language = dctLanguages[key];
        var button ='<div class="key" id="'+language.id+'" value="'+key+'"/>';
-       container.innerHTML+=button;
+
   //   button.top = "10px"; 
        button.style.marginLeft = parseInt(language.posx) * 100; 
+       container.innerHTML+=button;
   }
 }
