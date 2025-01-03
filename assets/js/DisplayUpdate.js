@@ -1,4 +1,5 @@
-function myFunction() {
+window.onload = function() {
+
 var myJSON= {"myObject": {
 "JAVA": {
     "id": "q",
