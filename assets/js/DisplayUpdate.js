@@ -37,7 +37,7 @@ var myJSON= {"myObject": {
     button.id = language.id; // Set the id attribute
     button.setAttribute("value", key); 
     button.style.top = "1000px"; 
-    cost test = parseInt(language.posx) * 100;
+    const test = parseInt(language.posx) * 100;
     button.style.marginLeft = test.toString().concat(px); 
     button.style.height = "100px"
     // Add the button to the container
