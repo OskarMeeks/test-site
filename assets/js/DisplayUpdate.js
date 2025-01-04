@@ -36,7 +36,7 @@ var myJSON= {"myObject": {
     button.classList.add("key"); 
     button.id = language.id; // Set the id attribute
     button.setAttribute("value", key); 
-    button.style.top = "1000px"; 
+    button.style.top = "10px"; 
     const test = parseInt(language.posx) * 100;
     button.style.marginLeft = test.toString().concat("px"); 
     button.style.height = "90px"
