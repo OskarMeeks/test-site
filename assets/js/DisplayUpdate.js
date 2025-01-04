@@ -46,7 +46,7 @@ var myJSON= {"myObject": {
     button.style.width = "90px"
     button.style.zIndex = "100"
     button.style.background = "grey";
-    button.addEventListener("click", myScript);
+    button.addEventListener("click", update);
     // Add the button to the container
     container.appendChild(button); 
 	  
