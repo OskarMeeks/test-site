@@ -1,5 +1,8 @@
 window.onload = function() {
-
+update();
+}
+function update() {
+	
 var myJSON= {"myObject": {
 "JAVA": {
     "id": "q",
@@ -43,6 +46,7 @@ var myJSON= {"myObject": {
     button.style.width = "90px"
     button.style.zIndex = "100"
     button.style.background = "grey";
+    button.addEventListener("click", myScript);
     // Add the button to the container
     container.appendChild(button); 
 	  
