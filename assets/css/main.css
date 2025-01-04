@@ -15,10 +15,12 @@
 	}
 	.keyhold{
 	height: 2000px;
-	margin: 0 2rem 0 0;
+	margin: 0 2rem  0;
 	width: calc(100% - 4rem);
 	position: absolute;
-	
+	top: 500px;
+	zIndex: 99;
+	background: "darkgrey;
 	}
 
 
