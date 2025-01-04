@@ -27,14 +27,27 @@ var myJSON= {"myObject": {
   var container= document.getElementById('buttons');
   for (var key in dctLanguages)
   {
-     var language = dctLanguages[key];
-       var button ='<div class="key" id="????" value="'+language.id+'"/>';
+
+
+    var language = dctLanguages[key];
+
+    // Create a new div element
+    var button = document.createElement("div"); 
+    button.classList.add("key"); 
+    button.id = language.id; // Set the id attribute
+    button.setAttribute("value", key); 
+
+    // Add the button to the container
+    container.appendChild(button); 
+	  
+  //   var language = dctLanguages[key];
+     //  var button ='<div class="key" id="????" value="'+language.id+'"/>';
 	  
 	//var sample = document.getElementById(language.id); // using var
 	//button.style.top = "10px"; // Changes color, adds style property.   ="'+language.id+'"  "'+language.id+'"       "'+key+'"
 	  
   //   button.top = "10px"; 
  //      button.style.marginLeft = parseInt(language.posx) * 100; 
-       container.innerHTML+=button;
+      // container.innerHTML+=button;
   }
 }
