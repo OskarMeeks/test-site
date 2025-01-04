@@ -38,7 +38,7 @@ var myJSON= {"myObject": {
     button.setAttribute("value", key); 
     button.style.top = "1000px"; 
     const test = parseInt(language.posx) * 100;
-    button.style.marginLeft = test.toString().concat(px); 
+    button.style.marginLeft = test.toString().concat("px"); 
     button.style.height = "100px"
     // Add the button to the container
     container.appendChild(button); 
