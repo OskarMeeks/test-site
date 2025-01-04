@@ -19,8 +19,8 @@
 	width: calc(100% - 4rem);
 	position: absolute;
 	top: 500px;
-	zIndex: 99;
-	background: "darkgrey;
+	z-index: 99;
+	background: darkgrey;
 	}
 
 
