@@ -36,7 +36,7 @@ var myJSON= {"myObject": {
     button.classList.add("key"); 
     button.id = language.id; // Set the id attribute
     button.setAttribute("value", key); 
-
+    button.style.top = "10px"; 
     // Add the button to the container
     container.appendChild(button); 
 	  
