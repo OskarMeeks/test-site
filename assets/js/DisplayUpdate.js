@@ -28,10 +28,10 @@ var myJSON= {"myObject": {
   for (var key in dctLanguages)
   {
      var language = dctLanguages[key];
-       var button ='<div class="key" id="'+language.id+'" value="'+key+'"/>';
+       var button ='<div class="key" id=language.id value="'+key+'"/>';
 	  
 	//var sample = document.getElementById(language.id); // using var
-	//button.style.top = "10px"; // Changes color, adds style property.
+	//button.style.top = "10px"; // Changes color, adds style property.   ="'+language.id+'"
 	  
   //   button.top = "10px"; 
  //      button.style.marginLeft = parseInt(language.posx) * 100; 
