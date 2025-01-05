@@ -40,7 +40,7 @@ var myJSON= {"myObject": {
 }
 }
   //change values of one
-  if(jsonedit == "true" && brush != null && brush != null){
+  if(jsonedit == "true"){
 	  //finds the aspect from all imputs
 	  for (var i = 0; i < myJSON.length; i++) {
 		  alert("1");
