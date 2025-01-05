@@ -70,7 +70,7 @@ var myJSON= {"myObject": {
  		  button.classList.add("key"); 
  		  button.id = language.id; // Set the id attribute
 		  button.setAttribute("value", key); 
-		  button.addEventListener("click", update("false", "true", language.id));
+		//  button.addEventListener("click", update("false", "true", language.id));
 
 		
   		  button.style.top = "10px"; 
