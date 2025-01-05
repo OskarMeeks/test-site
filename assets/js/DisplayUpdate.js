@@ -4,13 +4,6 @@ update("true", "false", "all", "na");
 var brush = "grey";
 var aspect = "color";
 
-function setbrush(brsh, aspct) {
-brush = brsh;
-aspect = aspct;
-
-		 alert("brush changed");
-}
-function update(reload, jsonedit, key_) {
 
 var myJSON= {"myObject": {
 "q": {
@@ -40,12 +33,22 @@ var myJSON= {"myObject": {
 }
 }
 
+
+function setbrush(brsh, aspct) {
+brush = brsh;
+aspect = aspct;
+
+		 alert("brush changed");
+}
+function update(reload, jsonedit, key_) {
+
 	  var json = myJSON["myObject"];
   //change values of json
   if(jsonedit == "true"){
-	  //finds the aspect from all imputs
+
 //get key match
 	  for (var key in myJSON) {
+		  alert(1);
  		 if (key == key_) {
 //get aspect match
 	         for (var aspectjson in myJSON[key]) {
