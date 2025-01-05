@@ -46,8 +46,7 @@ var myJSON= {"myObject": {
 	  //finds the aspect from all imputs
 
 	  for (var key in json) {
- 		 if (key.id == key_) {
-			  alert("2");
+ 		 if (json[key].id == key_) {
 	         for (var aspectjson in json[key]) {
 			 		  alert("3");
  		        if (aspectjson.name == aspect) {
