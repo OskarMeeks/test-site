@@ -43,8 +43,11 @@ var myJSON= {"myObject": {
   if(jsonedit == "true" && brush != null && brush != null){
 	  //finds the aspect from all imputs
 	  for (var i = 0; i < myJSON.length; i++) {
+		  alert("1");
  		 if (myJSON[i].id === key_) {
+			 		  alert("2");
 	         for (var p = 0; p < myJSON[i].length; p++) {
+			 		  alert("3");
  		        if (myJSON[i][p] === aspect) {
 				myJSON[i][p] = brush;
 				 alert(myJSON[i][p]);
@@ -74,7 +77,7 @@ var myJSON= {"myObject": {
  		  button.id = language.id; // Set the id attribute
 		//  button.setAttribute("value", key); 
 		  button.onclick = function(){update("false", "true", language.id)};
-
+                      
 		
   		  button.style.top = "10px"; 
   		  const test = parseInt(language.posx) * 100;
