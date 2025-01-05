@@ -61,7 +61,7 @@ function update(reload, jsonedit, key_) {
 	        // }		
 		// }
 	  // }
-	//  alert(key_);
+	  alert(key_);
 		myJSON[key_][aspect] = brush;
   }
 
