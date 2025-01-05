@@ -4,9 +4,9 @@ update("true", "false", "all", "na");
 var brush = "grey";
 var aspect = "color";
 
-function setbursh(brsh, aspct) {
-//brush = inp;
-//aspect = aspct;
+function setbrush(brsh, aspct) {
+brush = inp;
+aspect = aspct;
 
 		 alert("brush changed");
 }
