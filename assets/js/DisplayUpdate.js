@@ -45,20 +45,20 @@ var myJSON= {"myObject": {
   if(jsonedit == "true"){
 	  //finds the aspect from all imputs
 //get key match
-	//  for (var key in json) {
- 		// if (json[key].id == key_) {
+	  for (var key in json) {
+ 		 if (json[key].id == key_) {
 //get aspect match
-	         //for (var aspectjson in json[key]) {
-			 	//	  alert(Object.keys(json[key]));
- 		      //  if(Object.keys(json[key]) == aspect) {
-				//myJSON[key][aspectjson] = brush;
-				// alert(myJSON[key][aspectjson]);
-	            //    }
-	       //  }		
-		// }
-	 //  }
-	  alert(key_);
-		myJSON.key_.aspect = brush;
+	         for (var aspectjson in json[key]) {
+			 	  alert(aspectjson);
+ 		        if(aspectjson == aspect) {
+				myJSON[key][aspectjson] = brush;
+				 alert(myJSON[key][aspectjson]);
+	                }
+	         }		
+		 }
+	   }
+	//  alert(key_);
+		//myJSON.key_.aspect = brush;
   }
 
 
