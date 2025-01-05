@@ -42,7 +42,7 @@ var myJSON= {"myObject": {
 	 alert("let's go!");
   //change values of one
   if(jsonedit == "true" && brush != null && brush != null){
-	  
+	  //finds the aspect from all imputs
 	  for (var i = 0; i < myJSON.length; i++) {
  		 if (myJSON[i].id === key_) {
 	         for (var p = 0; p < myJSON[i].length; p++) {
@@ -59,12 +59,14 @@ var myJSON= {"myObject": {
   var container= document.getElementById('buttons');
 
 	 //regernerate all 
-	if(reload == "true"){
+
 		 alert("reloading all");
 	for (var key in dctLanguages)
 	{
+		var language = dctLanguages[key];
+		//edit all   uses key for each id
+	     if(reload == "true"){
 
-  		  var language = dctLanguages[key];
 
   		  // Create a new div element
   		  var button = document.createElement("div"); 
@@ -84,12 +86,11 @@ var myJSON= {"myObject": {
 
 		    // Add the button to the container
   		  container.appendChild(button); 
-	}
-	}
-	//edit style of one
-	if(reload == "false"){
+	      }
+			//edit style of one    
+	      if(reload == "false" && key === key_){
 			 alert("reloading one");
-		  var button = document.getElementById(key_); 
+		  var singbutton = document.getElementById(key); 
   		  button.style.top = "10px"; 
   		  const test = parseInt(language.posx) * 100;
 		  button.style.marginLeft = test.toString().concat("px"); 
@@ -98,5 +99,7 @@ var myJSON= {"myObject": {
 		  button.style.zIndex = "100"
  		  button.style.background = language.color;
 		
-	}
+	     }
+	 }
+
 }
