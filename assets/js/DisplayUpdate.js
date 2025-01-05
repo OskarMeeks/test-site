@@ -45,17 +45,11 @@ var myJSON= {"myObject": {
   if(jsonedit == "true"){
 	  //finds the aspect from all imputs
 
-	  for (var key in dctLanguages) {
-		  
-		 var currentKey = dctLanguages[key];
-		  alert(currentKey.id);
-		  alert(key_);
- 		 if (currentKey.id == key_) {
-			 
-			 		  alert("2");
-	         for (var aspectjson in currentKey) {
+	  for (var key in json) {
+ 		 if (key.name == key_) {
+	         for (var aspectjson in json[key]) {
 			 		  alert("3");
- 		        if (aspectjson === aspect) {
+ 		        if (aspectjson.name == aspect) {
 				myJSON[key][aspectjson] = brush;
 				 alert(myJSON[key][aspectjson]);
 	                }
