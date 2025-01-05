@@ -39,19 +39,21 @@ var myJSON= {"myObject": {
 }
 }
 }
-  //change values of one
+
+	  var dctLanguages = myJSON["myObject"];
+  //change values of json
   if(jsonedit == "true"){
 	  //finds the aspect from all imputs
 	    alert(Object.keys(myJSON).length);
-	  for (var i = 0; i < Object.keys(myJSON).length; i++) {
-		  alert("1");
- 		 if (myJSON[i].id === key_) {
+	  for (var key in dctLanguages) {
+		 var currentKey = dctLanguages[key];
+ 		 if (currentKey === key_) {
 			 		  alert("2");
-	         for (var p = 0; p < myJSON[i].length; p++) {
+	         for (var aspectjson in currentKey) {
 			 		  alert("3");
- 		        if (myJSON[i][p] === aspect) {
-				myJSON[i][p] = brush;
-				 alert(myJSON[i][p]);
+ 		        if (aspectjson === aspect) {
+				myJSON[key][aspectjson] = brush;
+				 alert(myJSON[key][aspectjson]);
 	                }
 	         }		
 		 }
@@ -59,7 +61,7 @@ var myJSON= {"myObject": {
 		//myJSON[key_][aspect] = brush;
   }
 
-  var dctLanguages = myJSON["myObject"];
+
   var container= document.getElementById('buttons');
 
 	 //regernerate all 
@@ -67,7 +69,7 @@ var myJSON= {"myObject": {
 	for (var key in dctLanguages)
 	{
 		//into current key
-		var language = dctLanguages[key];
+		var currentKey = dctLanguages[key];
 		//edit all   uses key for each id
 	     if(reload == "true"){
 
@@ -75,18 +77,18 @@ var myJSON= {"myObject": {
   		  // Create a new div element
   		  var button = document.createElement("div"); 
  		  button.classList.add("key"); 
- 		  button.id = language.id; // Set the id attribute
+ 		  button.id = currentKey.id; // Set the id attribute
 		//  button.setAttribute("value", key); 
-		  button.onclick = function(){update("false", "true", language.id)};
+		  button.onclick = function(){update("false", "true", currentKey.id)};
                       
 		
   		  button.style.top = "10px"; 
-  		  const test = parseInt(language.posx) * 100;
+  		  const test = parseInt(currentKey.posx) * 100;
 		  button.style.marginLeft = test.toString().concat("px"); 
  		  button.style.height = "90px"
 	  	  button.style.width = "90px"
 		  button.style.zIndex = "100"
- 		  button.style.background = language.color;
+ 		  button.style.background = currentKey.color;
 
 		    // Add the button to the container
   		  container.appendChild(button); 
@@ -96,12 +98,12 @@ var myJSON= {"myObject": {
 
 		  var singbutton = document.getElementById(key); 
   		  singbutton.style.top = "10px"; 
-  		  const test = parseInt(language.posx) * 100;
+  		  const test = parseInt(currentKey.posx) * 100;
 		  singbutton.style.marginLeft = test.toString().concat("px"); 
  		  singbutton.style.height = "90px"
 	  	  singbutton.style.width = "90px"
 		  singbutton.style.zIndex = "100"
- 		  singbutton.style.background = language.color;
+ 		  singbutton.style.background = currentKey.color;
 		
 	     }
 	 }
