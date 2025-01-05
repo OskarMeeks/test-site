@@ -47,22 +47,22 @@ function update(reload, jsonedit, key_) {
   if(jsonedit == "true"){
 
 //get key match
-	  for (var key in myJSON) {
-		 alert(key.id);
- 		 if (key.id == key_) {
-			  alert(1);
+	//  for (var key in myJSON) {
+		// alert(key.id);
+ 		// if (key.id == key_) {
+			//  alert(1);
 //get aspect match
-	         for (var aspectjson in myJSON[key]) {
-			  alert(2);
- 		        if(aspectjson == aspect) {
-				myJSON[key][aspectjson] = brush;
-				 alert(myJSON[key][aspectjson]);
-	                }
-	         }		
-		 }
-	   }
+	     //    for (var aspectjson in myJSON[key]) {
+			//  alert(2);
+ 		    //    if(aspectjson == aspect) {
+			//	myJSON[key][aspectjson] = brush;
+				// alert(myJSON[key][aspectjson]);
+	              //  }
+	        // }		
+		// }
+	  // }
 	//  alert(key_);
-		//myJSON.key_.aspect = brush;
+		myJSON[key_][aspect] = brush;
   }
 
 
