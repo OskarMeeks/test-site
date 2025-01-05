@@ -1,26 +1,32 @@
 window.onload = function() {
 update();
 }
-function update() {
+function update(reload, key, color1, color2) {
 	
 var myJSON= {"myObject": {
 "JAVA": {
     "id": "q",
     "path": "json/data.json",
     "posx": "0",
-    "posy": "0"
+    "posy": "0",
+    "color": "white",
+    "color2": "black"
 },
 "C#": { 
     "id": "w",
     "path": "json/data1.json",
     "posx": "1",
-    "posy": "0"
+    "posy": "0",
+    "color": "white",
+    "color2": "black"
 },
 "C++": {
    "id": "e",
    "path": "json/data2.json",
    "posx": "2", 
-   "posy": "0"
+   "posy": "0",
+   "color": "white",
+   "color2": "black"
 }
 }
 }
@@ -45,7 +51,7 @@ var myJSON= {"myObject": {
     button.style.height = "90px"
     button.style.width = "90px"
     button.style.zIndex = "100"
-    button.style.background = "grey";
+    button.style.background = language.color;
     button.addEventListener("click", update);
     // Add the button to the container
     container.appendChild(button); 
