@@ -57,6 +57,7 @@ var myJSON= {"myObject": {
 	       //  }		
 		// }
 	 //  }
+	  alert(key_);
 		myJSON[key_][aspect] = brush;
   }
 
