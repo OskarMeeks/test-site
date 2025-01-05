@@ -48,10 +48,12 @@ function update(reload, jsonedit, key_) {
 
 //get key match
 	  for (var key in myJSON) {
-		  alert(1);
+		 
  		 if (key == key_) {
+			  alert(1);
 //get aspect match
 	         for (var aspectjson in myJSON[key]) {
+			  alert(2);
  		        if(aspectjson == aspect) {
 				myJSON[key][aspectjson] = brush;
 				 alert(myJSON[key][aspectjson]);
