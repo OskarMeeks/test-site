@@ -44,8 +44,9 @@ var myJSON= {"myObject": {
   //change values of json
   if(jsonedit == "true"){
 	  //finds the aspect from all imputs
-	    alert(Object.keys(myJSON).length);
+
 	  for (var key in dctLanguages) {
+		  alert("2.5");
 		 var currentKey = dctLanguages[key];
  		 if (currentKey === key_) {
 			 		  alert("2");
