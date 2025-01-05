@@ -48,10 +48,10 @@ var myJSON= {"myObject": {
 	  for (var key in json) {
  		 if (json[key].id == key_) {
 	         for (var aspectjson in json[key]) {
-			 		  alert("3");
- 		        if (aspectjson.name == aspect) {
+			// 		  alert(json[key][aspectjson].name);
+ 		        if(json[key][aspectjson].name == aspect) {
 				myJSON[key][aspectjson] = brush;
-				 alert(myJSON[key][aspectjson]);
+				// alert(myJSON[key][aspectjson]);
 	                }
 	         }		
 		 }
