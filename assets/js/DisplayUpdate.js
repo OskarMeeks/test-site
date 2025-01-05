@@ -7,7 +7,7 @@ function setbursh(brsh, aspct) {
 brush = inp;
 aspect = aspct;
 
-	
+		 alert("brush changed");
 }
 function update(reload, jsonedit, key_) {
 
