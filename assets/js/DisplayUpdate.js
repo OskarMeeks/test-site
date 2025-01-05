@@ -70,7 +70,7 @@ var myJSON= {"myObject": {
   		  var button = document.createElement("div"); 
  		  button.classList.add("key"); 
  		  button.id = language.id; // Set the id attribute
-		  button.setAttribute("value", key); 
+		//  button.setAttribute("value", key); 
 		  button.onclick = function(){update("false", "true", language.id)};
 
 		
@@ -89,7 +89,7 @@ var myJSON= {"myObject": {
 	//edit style of one
 	if(reload == "false"){
 			 alert("reloading one");
-		  var button = document.getElementById(key); 
+		  var button = document.getElementById(key_); 
   		  button.style.top = "10px"; 
   		  const test = parseInt(language.posx) * 100;
 		  button.style.marginLeft = test.toString().concat("px"); 
