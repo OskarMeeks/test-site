@@ -47,6 +47,7 @@ var myJSON= {"myObject": {
 
 	  for (var key in json) {
  		 if (key.id == key_) {
+			  alert("2");
 	         for (var aspectjson in json[key]) {
 			 		  alert("3");
  		        if (aspectjson.name == aspect) {
