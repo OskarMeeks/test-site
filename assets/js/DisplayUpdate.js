@@ -60,13 +60,14 @@ var myJSON= {"myObject": {
 
 	 //regernerate all 
 
-		 alert("reloading all");
 	for (var key in dctLanguages)
 	{
+		//into current key
 		var language = dctLanguages[key];
 		//edit all   uses key for each id
 	     if(reload == "true"){
 
+		 alert("reloading all");
 
   		  // Create a new div element
   		  var button = document.createElement("div"); 
@@ -91,13 +92,13 @@ var myJSON= {"myObject": {
 	      if(reload == "false" && key === key_){
 			 alert("reloading one");
 		  var singbutton = document.getElementById(key); 
-  		  button.style.top = "10px"; 
+  		  singbutton.style.top = "10px"; 
   		  const test = parseInt(language.posx) * 100;
-		  button.style.marginLeft = test.toString().concat("px"); 
- 		  button.style.height = "90px"
-	  	  button.style.width = "90px"
-		  button.style.zIndex = "100"
- 		  button.style.background = language.color;
+		  singbutton.style.marginLeft = test.toString().concat("px"); 
+ 		  singbutton.style.height = "90px"
+	  	  singbutton.style.width = "90px"
+		  singbutton.style.zIndex = "100"
+ 		  singbutton.style.background = language.color;
 		
 	     }
 	 }
