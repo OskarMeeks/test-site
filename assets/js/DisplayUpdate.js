@@ -48,7 +48,7 @@ var myJSON= {"myObject": {
 	  for (var key in json) {
  		 if (json[key].id == key_) {
 	         for (var aspectjson in json[key]) {
-			// 		  alert(json[key][aspectjson].name);
+			 		  alert(json[key][aspectjson].name);
  		        if(json[key][aspectjson].name == aspect) {
 				myJSON[key][aspectjson] = brush;
 				// alert(myJSON[key][aspectjson]);
