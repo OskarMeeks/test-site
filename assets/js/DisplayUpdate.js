@@ -42,7 +42,7 @@ var myJSON= {"myObject": {
   //change values of one
   if(jsonedit == "true"){
 	  //finds the aspect from all imputs
-	    alert("10");
+	    alert(myJSON.length);
 	  for (var i = 0; i < myJSON.length; i++) {
 		  alert("1");
  		 if (myJSON[i].id === key_) {
