@@ -32,7 +32,7 @@ var myJSON= {"myObject": {
 }
 	 alert("let's go!");
   //change values
-  if(jsonedit == true){
+  if(jsonedit == "true"){
 
 	  
   }
@@ -41,7 +41,7 @@ var myJSON= {"myObject": {
   var container= document.getElementById('buttons');
 
 	 //regernerate all 
-	if(reload == true){
+	if(reload == "true"){
 	for (var key in dctLanguages)
 	{
 
@@ -65,7 +65,7 @@ var myJSON= {"myObject": {
 	}
 	}
 	//edit style of one
-	if(reload == false){
+	if(reload == "false"){
 		var language = dctLanguages[key_];
 
 		
