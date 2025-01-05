@@ -1,10 +1,10 @@
-window.onload = function() {
+window.onload = function(true, false all, white, black) {
 update();
 }
-function update(reload, key, color1, color2) {
-	
+function update(reload, jsonedit, key_, color1, color2) {
+
 var myJSON= {"myObject": {
-"JAVA": {
+"q": {
     "id": "q",
     "path": "json/data.json",
     "posx": "0",
@@ -12,7 +12,7 @@ var myJSON= {"myObject": {
     "color": "white",
     "color2": "black"
 },
-"C#": { 
+"w": { 
     "id": "w",
     "path": "json/data1.json",
     "posx": "1",
@@ -20,7 +20,7 @@ var myJSON= {"myObject": {
     "color": "white",
     "color2": "black"
 },
-"C++": {
+"e": {
    "id": "e",
    "path": "json/data2.json",
    "posx": "2", 
@@ -31,39 +31,43 @@ var myJSON= {"myObject": {
 }
 }
 	 alert("let's go!");
+  //change values
+  if(jsonedit == true){
+
+	  
+  }
 
   var dctLanguages = myJSON["myObject"];
   var container= document.getElementById('buttons');
-  for (var key in dctLanguages)
-  {
 
+	 //regernerate all 
+	if(reload == true){
+	for (var key in dctLanguages)
+	{
 
-    var language = dctLanguages[key];
+  		  var language = dctLanguages[key];
 
-    // Create a new div element
-    var button = document.createElement("div"); 
-    button.classList.add("key"); 
-    button.id = language.id; // Set the id attribute
-    button.setAttribute("value", key); 
-    button.style.top = "10px"; 
-    const test = parseInt(language.posx) * 100;
-    button.style.marginLeft = test.toString().concat("px"); 
-    button.style.height = "90px"
-    button.style.width = "90px"
-    button.style.zIndex = "100"
-    button.style.background = language.color;
-    button.addEventListener("click", update);
-    // Add the button to the container
-    container.appendChild(button); 
-	  
-  //   var language = dctLanguages[key];
-     //  var button ='<div class="key" id="????" value="'+language.id+'"/>';
-	  
-	//var sample = document.getElementById(language.id); // using var
-	//button.style.top = "10px"; // Changes color, adds style property.   ="'+language.id+'"  "'+language.id+'"       "'+key+'"
-	  
-  //   button.top = "10px"; 
+  		  // Create a new div element
+  		  var button = document.createElement("div"); 
+ 		  button.classList.add("key"); 
+ 		  button.id = language.id; // Set the id attribute
+		  button.setAttribute("value", key); 
+  		  button.style.top = "10px"; 
+  		  const test = parseInt(language.posx) * 100;
+		  button.style.marginLeft = test.toString().concat("px"); 
+ 		  button.style.height = "90px"
+	  	  button.style.width = "90px"
+		  button.style.zIndex = "100"
+ 		  button.style.background = language.color;
+		  button.addEventListener("click", update);
+		    // Add the button to the container
+  		  container.appendChild(button); 
+	}
+	}
+	//edit style of one
+	if(reload == false){
+		var language = dctLanguages[key_];
 
-      // container.innerHTML+=button;
-  }
+		
+	}
 }
