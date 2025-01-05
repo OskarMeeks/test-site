@@ -41,7 +41,15 @@ var myJSON= {"myObject": {
 	 alert("let's go!");
   //change values of one
   if(jsonedit == "true" && brush != null && brush != null){
-	//	myJSON.key_.aspect = brush;
+	  
+	//  for (var i = 0; i < myJSON.length; i++) {
+ 		// if (myJSON[i].id === key_) {
+	  //       for (var i = 0; i < myJSON[i].id.length; i++) {
+ 		    //    if (myJSON[i].id === key_) {
+		//    }
+	//  }		
+	  
+		myJSON[key_][aspect] = brush;
   }
 
   var dctLanguages = myJSON["myObject"];
@@ -59,7 +67,7 @@ var myJSON= {"myObject": {
  		  button.classList.add("key"); 
  		  button.id = language.id; // Set the id attribute
 		  button.setAttribute("value", key); 
-		  //button.addEventListener("click", update("false", "true", language.id));
+		  button.addEventListener("click", update("false", "true", language.id));
 
 		
   		  button.style.top = "10px"; 
