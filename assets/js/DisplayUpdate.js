@@ -10,7 +10,7 @@ var myJSON= {"myObject": {
     "posx": "0",
     "posy": "0",
     "color": "white",
-    "color2": "black"
+    "coloralt": "black"
 },
 "w": { 
     "id": "w",
@@ -18,7 +18,7 @@ var myJSON= {"myObject": {
     "posx": "1",
     "posy": "0",
     "color": "white",
-    "color2": "black"
+    "coloralt": "black"
 },
 "e": {
    "id": "e",
@@ -26,15 +26,15 @@ var myJSON= {"myObject": {
    "posx": "2", 
    "posy": "0",
    "color": "white",
-   "color2": "black"
+   "coloralt": "black"
 }
 }
 }
 	 alert("let's go!");
-  //change values
+  //change values of one
   if(jsonedit == "true"){
-
-	  
+		myJSON.key_.color = color1;
+	  	myJSON.key_.coloralt = color12;
   }
 
   var dctLanguages = myJSON["myObject"];
@@ -52,6 +52,9 @@ var myJSON= {"myObject": {
  		  button.classList.add("key"); 
  		  button.id = language.id; // Set the id attribute
 		  button.setAttribute("value", key); 
+		  button.addEventListener("click", update);
+
+		
   		  button.style.top = "10px"; 
   		  const test = parseInt(language.posx) * 100;
 		  button.style.marginLeft = test.toString().concat("px"); 
@@ -59,15 +62,21 @@ var myJSON= {"myObject": {
 	  	  button.style.width = "90px"
 		  button.style.zIndex = "100"
  		  button.style.background = language.color;
-		  button.addEventListener("click", update);
+
 		    // Add the button to the container
   		  container.appendChild(button); 
 	}
 	}
 	//edit style of one
 	if(reload == "false"){
-		var language = dctLanguages[key_];
-
+		  var button = document.getElementById("myElementId"); 
+  		  button.style.top = "10px"; 
+  		  const test = parseInt(language.posx) * 100;
+		  button.style.marginLeft = test.toString().concat("px"); 
+ 		  button.style.height = "90px"
+	  	  button.style.width = "90px"
+		  button.style.zIndex = "100"
+ 		  button.style.background = language.color;
 		
 	}
 }
