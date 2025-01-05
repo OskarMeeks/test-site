@@ -48,9 +48,9 @@ var myJSON= {"myObject": {
 	  for (var key in dctLanguages) {
 		  
 		 var currentKey = dctLanguages[key];
-		  alert(currentKey);
+		  alert(currentKey.id);
 		  alert(key_);
- 		 if (currentKey == key_) {
+ 		 if (currentKey.id == key_) {
 			 
 			 		  alert("2");
 	         for (var aspectjson in currentKey) {
