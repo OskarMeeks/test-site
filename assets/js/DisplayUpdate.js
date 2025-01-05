@@ -45,10 +45,10 @@ var myJSON= {"myObject": {
   if(jsonedit == "true"){
 	  //finds the aspect from all imputs
 //get key match
-	  for (var key in json) {
+	  for (var key in myJSON) {
  		 if (key == key_) {
 //get aspect match
-	         for (var aspectjson in json[key]) {
+	         for (var aspectjson in myJSON[key]) {
  		        if(aspectjson == aspect) {
 				myJSON[key][aspectjson] = brush;
 				 alert(myJSON[key][aspectjson]);
