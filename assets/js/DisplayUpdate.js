@@ -47,9 +47,9 @@ function update(reload, jsonedit, key_) {
   if(jsonedit == "true"){
 
 //get key match
-	  for (var key.id in myJSON) {
+	  for (var key in myJSON) {
 		 alert(key.id);
- 		 if (key == key_) {
+ 		 if (key.id == key_) {
 			  alert(1);
 //get aspect match
 	         for (var aspectjson in myJSON[key]) {
