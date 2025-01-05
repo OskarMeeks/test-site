@@ -42,14 +42,16 @@ var myJSON= {"myObject": {
   //change values of one
   if(jsonedit == "true" && brush != null && brush != null){
 	  
-	//  for (var i = 0; i < myJSON.length; i++) {
- 		// if (myJSON[i].id === key_) {
-	  //       for (var i = 0; i < myJSON[i].id.length; i++) {
- 		    //    if (myJSON[i].id === key_) {
-		//    }
-	//  }		
-	  
-		myJSON[key_][aspect] = brush;
+	  for (var i = 0; i < myJSON.length; i++) {
+ 		 if (myJSON[i].id === key_) {
+	         for (var p = 0; p < myJSON[i].length; p++) {
+ 		        if (myJSON[i][p] === aspect) {
+				myJSON[i][p] = brush;
+	      }
+	  }		
+		 }
+	  }
+		//myJSON[key_][aspect] = brush;
   }
 
   var dctLanguages = myJSON["myObject"];
