@@ -59,6 +59,7 @@ var myJSON= {"myObject": {
 
 	 //regernerate all 
 	if(reload == "true"){
+		 alert("reloading all");
 	for (var key in dctLanguages)
 	{
 
@@ -86,6 +87,7 @@ var myJSON= {"myObject": {
 	}
 	//edit style of one
 	if(reload == "false"){
+			 alert("reloading one");
 		  var button = document.getElementById(key); 
   		  button.style.top = "10px"; 
   		  const test = parseInt(language.posx) * 100;
