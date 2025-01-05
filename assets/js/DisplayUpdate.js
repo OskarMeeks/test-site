@@ -1,4 +1,4 @@
-window.onload = function(true, false "all", white, black) {
+window.onload = function("true", "false" "all", "white", "black") {
 update();
 }
 function update(reload, jsonedit, key_, color1, color2) {
