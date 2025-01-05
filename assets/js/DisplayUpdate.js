@@ -40,13 +40,13 @@ var myJSON= {"myObject": {
 }
 }
 
-	  var dctLanguages = myJSON["myObject"];
+	  var json = myJSON["myObject"];
   //change values of json
   if(jsonedit == "true"){
 	  //finds the aspect from all imputs
 
 	  for (var key in json) {
- 		 if (key.name == key_) {
+ 		 if (key.id == key_) {
 	         for (var aspectjson in json[key]) {
 			 		  alert("3");
  		        if (aspectjson.name == aspect) {
@@ -64,10 +64,10 @@ var myJSON= {"myObject": {
 
 	 //regernerate all 
 
-	for (var key in dctLanguages)
+	for (var key in json)
 	{
 		//into current key
-		var currentKey = dctLanguages[key];
+		var currentKey = json[key];
 		//edit all   uses key for each id
 	     if(reload == "true"){
 
