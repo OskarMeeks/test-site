@@ -1,7 +1,15 @@
 window.onload = function() {
 update("true", "false", "all", "white", "black");
 }
-function update(reload, jsonedit, key_, color1, color2) {
+var brush = "grey";
+var aspect = "color";
+function setbursh(brsh, aspct) {
+brush = inp;
+aspect = aspct;
+
+	
+}
+function update(reload, jsonedit, key_) {
 
 var myJSON= {"myObject": {
 "q": {
@@ -32,9 +40,8 @@ var myJSON= {"myObject": {
 }
 	 alert("let's go!");
   //change values of one
-  if(jsonedit == "true"){
-		myJSON.key_.color = color1;
-	  	myJSON.key_.coloralt = color12;
+  if(jsonedit == "true" && brush != null && brush != null){
+		myJSON.key_.aspect = brush;
   }
 
   var dctLanguages = myJSON["myObject"];
@@ -52,7 +59,7 @@ var myJSON= {"myObject": {
  		  button.classList.add("key"); 
  		  button.id = language.id; // Set the id attribute
 		  button.setAttribute("value", key); 
-		  button.addEventListener("click", update);
+		  button.addEventListener("click", update("false", "true", language.id));
 
 		
   		  button.style.top = "10px"; 
@@ -69,7 +76,7 @@ var myJSON= {"myObject": {
 	}
 	//edit style of one
 	if(reload == "false"){
-		  var button = document.getElementById("myElementId"); 
+		  var button = document.getElementById(key); 
   		  button.style.top = "10px"; 
   		  const test = parseInt(language.posx) * 100;
 		  button.style.marginLeft = test.toString().concat("px"); 
