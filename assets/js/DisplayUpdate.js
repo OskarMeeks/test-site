@@ -3,9 +3,10 @@ update("true", "false", "all", "na");
 }
 var brush = "grey";
 var aspect = "color";
+
 function setbursh(brsh, aspct) {
-brush = inp;
-aspect = aspct;
+//brush = inp;
+//aspect = aspct;
 
 		 alert("brush changed");
 }
@@ -47,10 +48,10 @@ var myJSON= {"myObject": {
 	         for (var p = 0; p < myJSON[i].length; p++) {
  		        if (myJSON[i][p] === aspect) {
 				myJSON[i][p] = brush;
-	      }
-	  }		
+	                }
+	         }		
 		 }
-	  }
+	   }
 		//myJSON[key_][aspect] = brush;
   }
 
