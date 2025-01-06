@@ -64,8 +64,7 @@ function update(reload, jsonedit, key_) {
  		  button.classList.add("key"); 
  		  button.id = currentKey.id; // Set the id attribute
 		//  button.setAttribute("value", key); 
-		  button.onclick = function(){update("false", "true", key)};
-                                        alert(key);
+		  button.setAttribute("onclick","update("false", "true", key)");
 		
   		  button.style.top = "10px"; 
   		  const test = parseInt(currentKey.posx) * 100;
