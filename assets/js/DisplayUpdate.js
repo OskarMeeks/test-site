@@ -60,9 +60,9 @@ function update(reload, jsonedit, key_) {
 		
 	     if(reload == "true"){
 
-  		  var button = document.createElement("img"); 
+  		  var button = document.createElement("div"); 
 		  var content = document.createElement("label");
-
+                  
 		  button.classList.add("key"); 
  		  button.id = currentKey.id;
 		  button.setAttribute("onclick","update('false', 'true','" + key + "')");
