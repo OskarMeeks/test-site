@@ -70,8 +70,8 @@ function update(reload, jsonedit, key_) {
   		  button.style.top = "10px"; 
   		  const space = parseInt(currentKey.posx) * u;
 		  button.style.marginLeft = space.toString().concat("px"); 
- 		  button.style.height = "90px"
-	  	  button.style.width = "90px"
+ 		  button.style.height = u2;
+	  	  button.style.width = u2;
 		  button.style.zIndex = "100"
  		  button.style.background = currentKey.color;
 
@@ -87,8 +87,8 @@ function update(reload, jsonedit, key_) {
   		  singbutton.style.top = "10px"; 
   		  const space = parseInt(currentKey.posx) * u;
 		  singbutton.style.marginLeft = space.toString().concat("px"); 
- 		  singbutton.style.height = "90px"
-	  	  singbutton.style.width = "90px"
+ 		  singbutton.style.height = u2;
+	  	  singbutton.style.width = u2;
 		  singbutton.style.zIndex = "100"
  		  singbutton.style.background = currentKey.color;
 		
