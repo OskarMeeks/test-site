@@ -71,7 +71,7 @@ function update(reload, jsonedit, key_) {
 		  content.textContent=currentKey.id.toString();
 		  content.id=currentKey.id.concat("text");
 
-		  bg.setAttribute("src","https://github.com/OskarMeeks/test-site/blob/main/whitecap.png?raw=true");
+		  bg.setAttribute("src","https://github.com/OskarMeeks/test-site/blob/main/images/0001.png?raw=true");
 		  bg.style.width = u2;
 		  bg.style.zIndex = "-1";
 		  bg.style.position = "absolute";
