@@ -73,7 +73,8 @@ function update(reload, jsonedit, key_) {
 
 		  bg.setAttribute("src","https://github.com/OskarMeeks/test-site/blob/main/whitecap.png?raw=true");
 		  bg.style.width = u2;
-		  bg.style.zIndex = "99"
+		  bg.style.zIndex = "-1";
+		  bg.style.position = "absolute";
   		  container.appendChild(button); 
 		  button.appendChild(bg);
 		  button.appendChild(content);
