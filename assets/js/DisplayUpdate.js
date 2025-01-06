@@ -77,7 +77,8 @@ function update(reload, jsonedit, key_) {
 
 		    // Add the button to the container
   		  container.appendChild(button); 
-		  var content = document.createTextNode("<YOUR_CONTENT>");
+		  var content = document.createElement("label");
+		  content.value = key.tostring();
 		  button.appendChild(content);
 	      }
 			//edit style of one    
