@@ -77,8 +77,12 @@ function update(reload, jsonedit, key_) {
 
 		    // Add the button to the container
   		  container.appendChild(button); 
+
+		 //create labels
 		  var content = document.createElement("label");
 		  content.textContent=currentKey.id.toString();
+		  content.id=currentKey.id.concat("text");
+		  content.style.color = currentKey.color;
 		  button.appendChild(content);
 	      }
 			//edit style of one    
@@ -92,6 +96,9 @@ function update(reload, jsonedit, key_) {
 	  	  singbutton.style.width = u2;
 		  singbutton.style.zIndex = "100"
  		  singbutton.style.background = currentKey.color;
+		      
+		  var singtext = document.getElementById(key_+"text");
+		  singtext.style.color = currentKey.color;
 		
 	     }
 	 }
