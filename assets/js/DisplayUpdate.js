@@ -12,7 +12,7 @@ var myJSON= {"myObject": {
     "path": "json/data.json",
     "posx": "0",
     "posy": "0",
-    "color": "white",
+    "color": "180deg",
     "coloralt": "black"
 },
 "w": { 
@@ -20,7 +20,7 @@ var myJSON= {"myObject": {
     "path": "json/data1.json",
     "posx": "1",
     "posy": "0",
-    "color": "white",
+    "color": "20deg",
     "coloralt": "black"
 },
 "e": {
@@ -28,7 +28,7 @@ var myJSON= {"myObject": {
    "path": "json/data2.json",
    "posx": "2", 
    "posy": "0",
-   "color": "white",
+   "color": "240deg",
    "coloralt": "black"
 }
 }
@@ -56,8 +56,8 @@ function update(reload, jsonedit, key_) {
 	{
 		//into current key
 		var currentKey = json[key];
-		//edit all   uses key for each id
 		
+		//creates keys and sets constants
 	     if(reload == "true"){
 
   		  var button = document.createElement("div"); 
@@ -70,8 +70,9 @@ function update(reload, jsonedit, key_) {
 
 		  content.textContent=currentKey.id.toString();
 		  content.id=currentKey.id.concat("text");
-
-		  bg.setAttribute("src","https://github.com/OskarMeeks/test-site/blob/main/images/0001.png?raw=true");
+		     
+		  bg.id=currentKey.id.concat("im");
+		  bg.setAttribute("src","https://github.com/OskarMeeks/test-site/blob/main/images/key.png?raw=true");
 		  bg.style.width = u2;
 		  bg.style.zIndex = "-1";
 		  bg.style.position = "absolute";
@@ -79,10 +80,10 @@ function update(reload, jsonedit, key_) {
 		  button.appendChild(bg);
 		  button.appendChild(content);
 	      }
-
+		//sets adjustables
 		  var button = document.getElementById(key); 
 		  var text = document.getElementById(key+"text");
-
+                  var bg = document.getElementById(key+"im");
 
 		
   		  button.style.top = "10px"; 
@@ -90,8 +91,8 @@ function update(reload, jsonedit, key_) {
 		  button.style.marginLeft = space.toString().concat("px"); 
  		  button.style.height = u2;
 	  	  button.style.width = u2;
- 		  button.style.background = currentKey.color;
-
+ 		  //button.style.background = currentKey.color;
+                  bg.style.filter = sepia(100%) saturate(100%) brightness(70%) hue-rotate(currentKey.color)
 		  text.style.color = currentKey.coloralt;
 
 	 }
