@@ -57,15 +57,32 @@ function update(reload, jsonedit, key_) {
 		//into current key
 		var currentKey = json[key];
 		//edit all   uses key for each id
+		
 	     if(reload == "true"){
 
 
   		  // Create a new div element
   		  var button = document.createElement("div"); 
- 		  button.classList.add("key"); 
+		  var content = document.createElement("label");
+
+		    // Add the button to the container
+		  button.classList.add("key"); 
  		  button.id = currentKey.id; // Set the id attribute
-		//  button.setAttribute("value", key); 
 		  button.setAttribute("onclick","update('false', 'true','" + key + "')");
+
+		  content.textContent=currentKey.id.toString();
+		  content.id=currentKey.id.concat("text");
+		     
+  		  container.appendChild(button); 
+		  button.appendChild(content);
+	      }
+			//edit style of all    
+	      if(reload == "false"){
+
+		  var button = document.getElementById(key); 
+		  var text = document.getElementById(key+"text");
+
+
 		
   		  button.style.top = "10px"; 
   		  const space = parseInt(currentKey.posx) * u;
@@ -75,31 +92,8 @@ function update(reload, jsonedit, key_) {
 		  button.style.zIndex = "100"
  		  button.style.background = currentKey.color;
 
-		    // Add the button to the container
-  		  container.appendChild(button); 
+		  text.style.color = currentKey.coloralt;
 
-		 //create labels
-		  var content = document.createElement("label");
-		  content.textContent=currentKey.id.toString();
-		  content.id=currentKey.id.concat("text");
-		  content.style.color = currentKey.coloralt;
-		  button.appendChild(content);
-	      }
-			//edit style of one    
-	      if(reload == "false" && key === key_){
-
-		  var singbutton = document.getElementById(key_); 
-  		  singbutton.style.top = "10px"; 
-  		  const space = parseInt(currentKey.posx) * u;
-		  singbutton.style.marginLeft = space.toString().concat("px"); 
- 		  singbutton.style.height = u2;
-	  	  singbutton.style.width = u2;
-		  singbutton.style.zIndex = "100"
- 		  singbutton.style.background = currentKey.color;
-		      
-		  var singtext = document.getElementById(key_+"text");
-		  singtext.style.color = currentKey.coloralt;
-		
 	     }
 	 }
 
