@@ -26,8 +26,13 @@
 	background: white;
 	}
         #maincolor{
-	top: 100px;
+	top: 700px;
   	position: absolute;
+	}
+        .decide{
+
+	width: 4rem;
+	height: 4rem;
 	}
 
 html, body, div, span, applet, object,
