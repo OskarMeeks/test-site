@@ -80,7 +80,7 @@ function update(reload, jsonedit, key_) {
 	      }
 			//edit style of one    
 	      if(reload == "false" && key === key_){
-
+                  alert(key_);
 		  var singbutton = document.getElementById(key_); 
   		  singbutton.style.top = "10px"; 
   		  const test = parseInt(currentKey.posx) * 100;
