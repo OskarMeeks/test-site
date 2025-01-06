@@ -14,13 +14,13 @@
 	position: absolute;
 	}
 	.keyhold{
-	height: 2000px;
-	margin: 0 2rem  0;
-	width: calc(100% - 4rem);
+	height: 800px;
+	margin: 0 4rem  0;
+	width: calc(100% - 8rem);
 	position: absolute;
 	top: 500px;
 	z-index: 99;
-	background: darkgrey;
+	background: white;
 	}
 
 
