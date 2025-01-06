@@ -37,31 +37,12 @@ var myJSON= {"myObject": {
 function setbrush(brsh, aspct) {
 brush = brsh;
 aspect = aspct;
-
-		 alert("brush changed");
 }
 function update(reload, jsonedit, key_) {
 
 	  var json = myJSON["myObject"];
   //change values of json
   if(jsonedit == "true"){
-
-//get key match                                     THE SOLUTION MIGHT BE ADDING .MYOBJECT
-	//  for (var key in myJSON) {
-		// alert(key.id);
- 		// if (key.id == key_) {
-			//  alert(1);
-//get aspect match
-	        // for (var aspectjson in myJSON[key]) {
-			//  alert(2);
- 		    //    if(aspectjson == aspect) {
-				//myJSON[key][aspectjson] = brush;
-				// alert(myJSON[key][aspectjson]);
-	              //  }
-	      //   }		
-		// }
-	  // }
-	//  alert(key_);
 		myJSON["myObject"][key_][aspect] = brush;
   }
 
@@ -100,7 +81,7 @@ function update(reload, jsonedit, key_) {
 			//edit style of one    
 	      if(reload == "false" && key === key_){
 
-		  var singbutton = document.getElementById(key); 
+		  var singbutton = document.getElementById(key_); 
   		  singbutton.style.top = "10px"; 
   		  const test = parseInt(currentKey.posx) * 100;
 		  singbutton.style.marginLeft = test.toString().concat("px"); 
