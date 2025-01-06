@@ -61,6 +61,7 @@ function update(reload, jsonedit, key_) {
 	     if(reload == "true"){
 
   		  var button = document.createElement("div"); 
+		  var bg = document.createElement("img");
 		  var content = document.createElement("label");
                   
 		  button.classList.add("key"); 
@@ -69,9 +70,12 @@ function update(reload, jsonedit, key_) {
 
 		  content.textContent=currentKey.id.toString();
 		  content.id=currentKey.id.concat("text");
+
+		  bg.setAttribute("src","https://github.com/OskarMeeks/test-site/blob/main/whitecap.png?raw=true");
 		     
   		  container.appendChild(button); 
 		  button.appendChild(content);
+		  button.appendChild(bg);
 	      }
 
 		  var button = document.getElementById(key); 
