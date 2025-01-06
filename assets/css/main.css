@@ -28,9 +28,12 @@
         #maincolor{
 	top: 700px;
   	position: absolute;
+	display: flex;
+	
 	}
         .decide{
         padding: 0px;
+	margin: 2px;
 	width: 4rem;
 	height: 4rem;
 	text-wrap-mode: wrap;
