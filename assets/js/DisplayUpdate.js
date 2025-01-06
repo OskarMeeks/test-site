@@ -72,10 +72,11 @@ function update(reload, jsonedit, key_) {
 		  content.id=currentKey.id.concat("text");
 
 		  bg.setAttribute("src","https://github.com/OskarMeeks/test-site/blob/main/whitecap.png?raw=true");
-		     
+		  bg.style.width = u2;
+		  bg.style.zIndex = "99"
   		  container.appendChild(button); 
-		  button.appendChild(content);
 		  button.appendChild(bg);
+		  button.appendChild(content);
 	      }
 
 		  var button = document.getElementById(key); 
