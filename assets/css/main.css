@@ -23,8 +23,7 @@
 	z-index: 99;
 	background: white;
 	}
-        #maincolor{
-	top: 700px;
+        .optionholder{
   	position: absolute;
 	display: flex;
 	
