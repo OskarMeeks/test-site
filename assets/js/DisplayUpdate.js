@@ -60,14 +60,11 @@ function update(reload, jsonedit, key_) {
 		
 	     if(reload == "true"){
 
-
-  		  // Create a new div element
   		  var button = document.createElement("div"); 
 		  var content = document.createElement("label");
 
-		    // Add the button to the container
 		  button.classList.add("key"); 
- 		  button.id = currentKey.id; // Set the id attribute
+ 		  button.id = currentKey.id;
 		  button.setAttribute("onclick","update('false', 'true','" + key + "')");
 
 		  content.textContent=currentKey.id.toString();
@@ -76,8 +73,6 @@ function update(reload, jsonedit, key_) {
   		  container.appendChild(button); 
 		  button.appendChild(content);
 	      }
-			//edit style of all    
-	      if(reload == "false"){
 
 		  var button = document.getElementById(key); 
 		  var text = document.getElementById(key+"text");
@@ -94,7 +89,6 @@ function update(reload, jsonedit, key_) {
 
 		  text.style.color = currentKey.coloralt;
 
-	     }
 	 }
 
 }
