@@ -10,9 +10,9 @@
 	.key{
 	margin-left: 10px;
 	position: absolute;
-	border-width: 1px;
+	border-width: 2px;
 	border-style: solid;
-	border-radius: 1px;
+	border-radius: 5px;
 	}
 	.keyhold{
 	height: 800px;
