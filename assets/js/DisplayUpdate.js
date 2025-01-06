@@ -3,8 +3,8 @@ update("true", "false", "all", "na");
 }
 var brush = "grey";
 var aspect = "color";
-var u = 30;
-var u2 = "29px";
+var u = 60;
+var u2 = "58px";
 
 var myJSON= {"myObject": {
 "q": {
