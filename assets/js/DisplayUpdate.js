@@ -82,7 +82,7 @@ function update(reload, jsonedit, key_) {
 		  var content = document.createElement("label");
 		  content.textContent=currentKey.id.toString();
 		  content.id=currentKey.id.concat("text");
-		  content.style.color = currentKey.color;
+		  content.style.color = currentKey.coloralt;
 		  button.appendChild(content);
 	      }
 			//edit style of one    
