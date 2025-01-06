@@ -4,7 +4,7 @@ update("true", "false", "all", "na");
 var brush = "grey";
 var aspect = "color";
 var u = 30;
-var u2 = 29;
+var u2 = "29";
 
 var myJSON= {"myObject": {
 "q": {
