@@ -76,6 +76,8 @@ function update(reload, jsonedit, key_) {
 
 		    // Add the button to the container
   		  container.appendChild(button); 
+		  var content = document.createTextNode("<YOUR_CONTENT>");
+		  button.appendChild(content);
 	      }
 			//edit style of one    
 	      if(reload == "false" && key === key_){
