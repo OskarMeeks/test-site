@@ -3,7 +3,8 @@ update("true", "false", "all", "na");
 }
 var brush = "grey";
 var aspect = "color";
-
+var u = 30;
+var u2 = 28;
 
 var myJSON= {"myObject": {
 "q": {
@@ -67,8 +68,8 @@ function update(reload, jsonedit, key_) {
 		  button.setAttribute("onclick","update('false', 'true','" + key + "')");
 		
   		  button.style.top = "10px"; 
-  		  const test = parseInt(currentKey.posx) * 100;
-		  button.style.marginLeft = test.toString().concat("px"); 
+  		  const space = parseInt(currentKey.posx) * u;
+		  button.style.marginLeft = space.toString().concat("px"); 
  		  button.style.height = "90px"
 	  	  button.style.width = "90px"
 		  button.style.zIndex = "100"
@@ -84,8 +85,8 @@ function update(reload, jsonedit, key_) {
 
 		  var singbutton = document.getElementById(key_); 
   		  singbutton.style.top = "10px"; 
-  		  const test = parseInt(currentKey.posx) * 100;
-		  singbutton.style.marginLeft = test.toString().concat("px"); 
+  		  const space = parseInt(currentKey.posx) * u;
+		  singbutton.style.marginLeft = space.toString().concat("px"); 
  		  singbutton.style.height = "90px"
 	  	  singbutton.style.width = "90px"
 		  singbutton.style.zIndex = "100"
