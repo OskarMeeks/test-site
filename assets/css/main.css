@@ -30,9 +30,10 @@
   	position: absolute;
 	}
         .decide{
-
+        padding: 0px;
 	width: 4rem;
 	height: 4rem;
+	text-wrap-mode: wrap;
 	}
 
 html, body, div, span, applet, object,
@@ -2111,7 +2112,7 @@ input, select, textarea {
 		font-weight: 900;
 		letter-spacing: 0.075em;
 		height: 3rem;
-		line-height: 3rem;
+		line-height: 1rem;
 		padding: 0 2rem;
 		text-align: center;
 		text-decoration: none;
