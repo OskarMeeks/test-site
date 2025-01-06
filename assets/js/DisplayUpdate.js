@@ -60,7 +60,7 @@ function update(reload, jsonedit, key_) {
 		
 	     if(reload == "true"){
 
-  		  var button = document.createElement("div"); 
+  		  var button = document.createElement("img"); 
 		  var content = document.createElement("label");
 
 		  button.classList.add("key"); 
