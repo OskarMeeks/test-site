@@ -98,7 +98,7 @@ function update(reload, jsonedit, key_) {
  		  singbutton.style.background = currentKey.color;
 		      
 		  var singtext = document.getElementById(key_+"text");
-		  singtext.style.color = currentKey.color;
+		  singtext.style.color = currentKey.coloralt;
 		
 	     }
 	 }
