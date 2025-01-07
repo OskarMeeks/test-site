@@ -1,10 +1,12 @@
 window.onload = function() {
 update("true", "false", "all", "na");
 }
+
 var brush = "grey";
 var aspect = "color";
 var u = 80;
 var u2 = "78px";
+var selectedkey;
 
 var myJSON= {"myObject": {
 "q": {
@@ -50,7 +52,7 @@ brush = brsh;
 aspect = aspct;
 }
 
-function editable text(on){
+//function editable text(on){
 //if(on = "true"){
 //text.setAttribute contenteditable="true"
 	
