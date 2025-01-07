@@ -3,8 +3,8 @@ update("true", "false", "all", "na");
 }
 var brush = "grey";
 var aspect = "color";
-var u = 60;
-var u2 = "58px";
+var u = 80;
+var u2 = "78px";
 
 var myJSON= {"myObject": {
 "q": {
@@ -68,7 +68,7 @@ function update(reload, jsonedit, key_) {
  		  button.id = currentKey.id.toString();
 		  button.setAttribute("onclick","update('false', 'true','" + key + "')");
 
-		  content.textContent=currentKey.toString();
+		  content.textContent=currentKey.id.toString();
 		  content.id=currentKey.id.toString()+"text";
 		  content.style.marginLeft = u/3+"px";
 		  bg.id=currentKey.id.toString()+"im";;
