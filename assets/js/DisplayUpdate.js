@@ -67,8 +67,9 @@ function updatespecial(reload, aspct1, aspct2, value){
 function tabmanager(selectedtab){
 	var tabs = ["tab1","tab2","tab3"];
 	for(var tab in tabs){
-		alert(tab);
-		var tabb = document.getElementById(tab); 
+		var currenttab = tabs[tab]
+		//alert(tab);
+		var tabb = document.getElementById(currenttab); 
 		if(tabb == selectedtab){
 		tabb.style.visibility = "visible"
 		}
