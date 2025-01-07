@@ -20,6 +20,14 @@
 	z-index: 99;
 	background: white;
 	}
+	#menuholder{
+	position: absolute;
+	width: 1520px;
+	height: 400px;
+ 	background-color: rgb(40,40,50);
+
+		
+	}
         .optionholder{
   	position: absolute;
 	display: flex;
