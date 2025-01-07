@@ -1,5 +1,5 @@
 window.onload = function() {
-reloader();
+reloader("true");
 }
 
 var brush = "grey";
