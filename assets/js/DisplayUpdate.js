@@ -3,7 +3,8 @@ reloader("true");
 }
 
 var brush = "grey";
-var aspect = "color";
+var aspect1 = "color";
+var aspect2;
 var u = 80;
 var u2 = "78px";
 var selectedkey;
@@ -47,14 +48,22 @@ var myJSON= {"myObject": {
 };
 
 
-function setbrush(brsh, aspct) {
+function setbrush(brsh, aspct1, aspct2) {
 brush = brsh;
-aspect = aspct;
+aspect1 = aspct1;
+aspect2 = aspct2;	
 }
 
 //called when clicking on a button to quick apply a style     uses saved value and aspect
 function update(reload, clickedkey){
-	myJSON["myObject"][clickedkey][aspect] = brush;
+	if(aspect2 == "none")
+	{
+	myJSON["myObject"][clickedkey][aspect1] = brush;
+	}
+	else{
+	myJSON["myObject"][clickedkey][aspect1][aspect2] = brush;
+	}
+
 	reloader(reload);
 }
 //called when editing properties pannel                       uses immediate defined aspects and value
