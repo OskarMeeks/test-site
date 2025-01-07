@@ -70,7 +70,7 @@ function update(reload, jsonedit, key_) {
 
 		  content.textContent=currentKey.id.toString();
 		  content.id=currentKey.id.concat("text");
-		     
+		  content.style.marginLeft = u/3+"px";
 		  bg.id=currentKey.id.concat("im");
 		  bg.setAttribute("src","https://github.com/OskarMeeks/test-site/blob/main/images/key.png?raw=true");
 		  bg.style.width = u2;
