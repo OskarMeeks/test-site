@@ -53,18 +53,15 @@ aspect = aspct;
 }
 
 //called when clicking on a button to quick apply a style     uses saved value and aspect
-function update(reload, clickedkey) {
-  
+function update(reload, clickedkey){
 	myJSON["myObject"][clickedkey][aspect] = brush;
-  
-reloader(reload);
+	reloader(reload);
 }
 //called when editing properties pannel                       uses immediate defined aspects and value
-function updateall(reload, selectedkey) {
-	myJSON["myObject"][selectedkey][aspect] = brush;
-  
-reloader(reload);
-}
+//function updateall(reload, selectedkey){
+//	myJSON["myObject"][selectedkey][aspect] = brush;
+//	reloader(reload);
+//}
 
 
 funciton reloader(reloads){
