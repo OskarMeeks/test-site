@@ -65,11 +65,13 @@ function updateall(reload, selectedkey){
 
 
 function reloader(reloads){
+	//this json object is the specific keyboard
+  var json = myJSON["myObject"];
   var container= document.getElementById('buttons');
-	for (var key in myJSON)
+	for (var key in json)
 	{
 		//into current key
-		var currentKey = myJSON[key];
+		var currentKey = json[key];
 		
 		//creates keys and sets constants
 	     if(reloads == "true"){
