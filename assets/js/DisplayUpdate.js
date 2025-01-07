@@ -66,7 +66,7 @@ function updateall(reload, selectedkey){
 
 function reloader(reloads){
   var container= document.getElementById('buttons');
-	for (var key in json)
+	for (var key in myJSON)
 	{
 		//into current key
 		var currentKey = json[key];
