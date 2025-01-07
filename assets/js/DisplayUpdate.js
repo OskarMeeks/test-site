@@ -59,7 +59,7 @@ aspect = aspct;
 //}
 
 	
-}
+//}
 function update(reload, jsonedit, key_) {
 
 	  var json = myJSON["myObject"];
