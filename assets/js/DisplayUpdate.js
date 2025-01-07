@@ -64,7 +64,7 @@ function updateall(reload, selectedkey){
 }
 
 
-funciton reloader(reloads){
+function reloader(reloads){
   var container= document.getElementById('buttons');
 	for (var key in json)
 	{
