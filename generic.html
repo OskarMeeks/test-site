@@ -56,14 +56,14 @@
 					<div class="keyhold" id="buttons" onload="myFunction();">
 						<div id="menuholder" style="top:700px;">
 							<div id="tabholder" style="top:700px;">
-								<button class="tab"></button>
-								<button class="tab"></button>
-								<button class="tab"></button>
-								<button class="tab"></button>
-								<button class="tab"></button>
+								<button class="tab" onclick="tabmanager('tab1')"></button>
+								<button class="tab" onclick="tabmanager('tab2')"></button>
+								<button class="tab" onclick="tabmanager('tab3')"></button>
+								<button class="tab" onclick="tabmanager('tab4')"></button>
+								<button class="tab" onclick="tabmanager('tab5')"></button>
 							</div>
 							
-							<div class="basicsection" style="top: 50px;position: absolute;">
+							<div id = "tab1" class="basicsection" style="top: 50px;position: absolute;">
 					 			<div id="maincolor" class="optionholder" style="top:50px;">
 									<button class="decide">set main color</button>
 						  			<button class="decide" onclick="setbrush('sepia(100%) saturate(30%) brightness(60%) hue-rotate(20deg)', 'color', 'none')" style="background-color:rgba(0, 0, 0, 1);"></button>
@@ -76,6 +76,13 @@
 									<button class="decide" onclick="setbrush('cornsilk','text0','coloralt')"style="background-color:cornsilk;"></button>
 									<button class="decide" onclick="setbrush('green','text0','coloralt')"style="background-color:green;"></button>
 								</div>
+							<div id = "tab2" class="basicsection" style="top: 50px;position: absolute;">
+
+							</div>	
+
+							<div id = "tab3" class="basicsection" style="top: 50px;position: absolute;">
+
+							</div>		
 							</div>
 						</div>
 					</div>
