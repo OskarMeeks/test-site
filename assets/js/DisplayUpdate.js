@@ -53,15 +53,15 @@ aspect = aspct;
 }
 
 //called when clicking on a button to quick apply a style     uses saved value and aspect
-function update(reload, key_) {
+function update(reload, clickedkey) {
   
-	myJSON["myObject"][key_][aspect] = brush;
+	myJSON["myObject"][clickedkey][aspect] = brush;
   
 reloader(reload);
 }
 //called when editing properties pannel                       uses immediate defined aspects and value
-function updateall(reload, key_) {
-	myJSON["myObject"][key_][aspect] = brush;
+function updateall(reload, selectedkey) {
+	myJSON["myObject"][selectedkey][aspect] = brush;
   
 reloader(reload);
 }
@@ -83,7 +83,7 @@ funciton reloader(reloads){
                   
 		  button.classList.add("key"); 
  		  button.id = currentKey.id.toString();
-		  button.setAttribute("onclick","update('false', 'true','" + key + "')");
+		  button.setAttribute("onclick","update('false','" + key + "')");
 
 		  content.textContent=currentKey.id.toString();
 		  content.id=currentKey.id.toString()+"text";
