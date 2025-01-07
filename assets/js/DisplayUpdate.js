@@ -1,5 +1,5 @@
 window.onload = function() {
-update("true", "false", "all", "na");
+reloader();
 }
 
 var brush = "grey";
@@ -52,34 +52,30 @@ brush = brsh;
 aspect = aspct;
 }
 
-//function editable text(on){
-//if(on = "true"){
-//text.setAttribute contenteditable="true"
-	
-//}
-
-	
-//}
-function update(reload, jsonedit, key_) {
-
-	  var json = myJSON["myObject"];
-  //change values of json
-  if(jsonedit == "true"){
-		myJSON["myObject"][key_][aspect] = brush;
-  }
+//called when clicking on a button to quick apply a style     uses saved value and aspect
+function update(reload, key_) {
+  
+	myJSON["myObject"][key_][aspect] = brush;
+  
+reloader(reload);
+}
+//called when editing properties pannel                       uses immediate defined aspects and value
+function updateall(reload, key_) {
+	myJSON["myObject"][key_][aspect] = brush;
+  
+reloader(reload);
+}
 
 
+funciton reloader(reloads){
   var container= document.getElementById('buttons');
-
-	 //regernerate all 
-
 	for (var key in json)
 	{
 		//into current key
 		var currentKey = json[key];
 		
 		//creates keys and sets constants
-	     if(reload == "true"){
+	     if(reloads == "true"){
 
   		  var button = document.createElement("div"); 
 		  var bg = document.createElement("img");
