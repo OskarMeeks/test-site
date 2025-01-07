@@ -70,7 +70,7 @@ function tabmanager(selectedtab){
 		var currenttab = tabs[tab]
 		//alert(tab);
 		var tabb = document.getElementById(currenttab); 
-		if(tabb == selectedtab){
+		if(currenttab == selectedtab){
 		tabb.style.visibility = "visible"
 		}
 		else{
