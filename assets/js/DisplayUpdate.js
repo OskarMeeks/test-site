@@ -8,6 +8,7 @@ var u2 = "58px";
 
 var myJSON= {"myObject": {
 "q": {
+    "id": "q",
     "posx": "0",
     "posy": "0",
     "color": "sepia(100%) saturate(255%) brightness(255%) hue-rotate(20deg)",
@@ -15,6 +16,7 @@ var myJSON= {"myObject": {
     "layer": "2"
 },
 "w": { 
+    "id": "w",
     "posx": "1",
     "posy": "0",
     "color": "sepia(100%) saturate(255%) brightness(255%) hue-rotate(20deg)",
@@ -22,6 +24,7 @@ var myJSON= {"myObject": {
     "layer": "2"
 },
 "e": {
+   "id": "e",	
    "posx": "2", 
    "posy": "0",
    "color": "sepia(100%) saturate(255%) brightness(255%) hue-rotate(20deg)",
@@ -62,13 +65,13 @@ function update(reload, jsonedit, key_) {
 		  var content = document.createElement("label");
                   
 		  button.classList.add("key"); 
- 		  button.id = currentKey.toString();
+ 		  button.id = currentKey.id.toString();
 		  button.setAttribute("onclick","update('false', 'true','" + key + "')");
 
 		  content.textContent=currentKey.toString();
-		  content.id=currentKey.toString()+"text";
+		  content.id=currentKey.id.toString()+"text";
 		  content.style.marginLeft = u/3+"px";
-		  bg.id=currentKey.toString()+"im";;
+		  bg.id=currentKey.id.toString()+"im";;
 		  bg.setAttribute("src","https://github.com/OskarMeeks/test-site/blob/main/images/key.png?raw=true");
 		  bg.style.width = u2;
 		  bg.style.zIndex = "-1";
