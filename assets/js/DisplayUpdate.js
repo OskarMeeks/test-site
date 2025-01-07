@@ -62,7 +62,7 @@ function update(reload, jsonedit, key_) {
 		  var content = document.createElement("label");
                   
 		  button.classList.add("key"); 
- 		  button.id = currentKey.id;
+ 		  button.id = currentKey.toString();
 		  button.setAttribute("onclick","update('false', 'true','" + key + "')");
 
 		  content.textContent=currentKey.toString();
