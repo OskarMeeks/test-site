@@ -58,8 +58,8 @@ function update(reload, clickedkey){
 	reloader(reload);
 }
 //called when editing properties pannel                       uses immediate defined aspects and value
-function updateall(reload, selectedkey){
-	myJSON["myObject"][selectedkey][aspect] = brush;
+function updatespecial(reload, aspct1, aspct2, value){
+	myJSON["myObject"][selectedkey][aspct1][aspct2] = value;
 	reloader(reload);
 }
 
