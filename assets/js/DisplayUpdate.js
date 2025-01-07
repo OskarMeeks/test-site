@@ -92,7 +92,7 @@ function update(reload, jsonedit, key_) {
  		  button.style.height = u2;
 	  	  button.style.width = u2;
  		  //button.style.background = currentKey.color;
-                  bg.style.filter = "sepia(100%) saturate(100%) brightness(100%) hue-rotate("+currentKey.color+")";
+                  bg.style.filter = "sepia(100%) saturate(255%) brightness(255%) hue-rotate("+currentKey.color+")";
 		  text.style.color = currentKey.coloralt;
 
 	 }
