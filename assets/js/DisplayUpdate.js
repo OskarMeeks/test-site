@@ -16,10 +16,7 @@ var myJSON= {"myObject": {
     "posy": "0",
     "color": "sepia(100%) saturate(255%) brightness(255%) hue-rotate(20deg)",
     "layer": "2",
-    "text0":{"coloralt":"black","content":"q","pos":"1"},
-    "text1":{"coloralt":"black","content":"q","pos":"1"},
-    "text2":{"coloralt":"black","content":"q","pos":"1"},
-    "text3":{"coloralt":"black","content":"q","pos":"1"}
+    "text0":{"coloralt":"black","content":"q","pos":"1",font:"Monico"}
 },
 "w": { 
     "id": "w",
@@ -27,10 +24,7 @@ var myJSON= {"myObject": {
     "posy": "0",
     "color": "sepia(100%) saturate(255%) brightness(255%) hue-rotate(20deg)",
     "layer": "2",
-    "text0":{"coloralt":"black","content":"w","pos":"1"},
-    "text1":{"coloralt":"black","content":"q","pos":"1"},
-    "text2":{"coloralt":"black","content":"q","pos":"1"},
-    "text3":{"coloralt":"black","content":"q","pos":"1"}
+    "text0":{"coloralt":"black","content":"w","pos":"1",font:"Monico"}
 },
 "e": {
    "id": "e",	
@@ -39,10 +33,7 @@ var myJSON= {"myObject": {
    "color": "sepia(100%) saturate(255%) brightness(255%) hue-rotate(20deg)",
    "coloralt": "black",
    "layer": "2",
-   "text0":{"coloralt":"black","content":"e","pos":"1"},
-   "text1":{"coloralt":"black","content":"q","pos":"1"},
-   "text2":{"coloralt":"black","content":"q","pos":"1"},
-   "text3":{"coloralt":"black","content":"e","pos":"1"}
+   "text0":{"coloralt":"black","content":"e","pos":"1",font:"Monico"}
     }
 }
 };
@@ -54,7 +45,7 @@ aspect1 = aspct1;
 aspect2 = aspct2;	
 }
 
-//called when clicking on a button to quick apply a style     uses saved value and aspect
+//called when clicking on a key to quick apply a style     uses saved value and aspect, imediately defined key
 function update(reload, clickedkey){
 	if(aspect2 == "none")
 	{
@@ -66,7 +57,7 @@ function update(reload, clickedkey){
 
 	reloader(reload);
 }
-//called when editing properties pannel                       uses immediate defined aspects and value
+//called when editing properties pannel                       uses saved key, immediate defined aspects and value
 function updatespecial(reload, aspct1, aspct2, value){
 	myJSON["myObject"][selectedkey][aspct1][aspct2] = value;
 	reloader(reload);
