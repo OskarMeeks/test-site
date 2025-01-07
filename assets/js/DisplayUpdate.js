@@ -12,16 +12,22 @@ var myJSON= {"myObject": {
     "posx": "0",
     "posy": "0",
     "color": "sepia(100%) saturate(255%) brightness(255%) hue-rotate(20deg)",
-    "coloralt": "black",
-    "layer": "2"
+    "layer": "2",
+    "text0":{"coloralt": "black","content": "q", "pos": "1"},
+    "text1":{"coloralt": "black","content": "q", "pos": "1"},
+    "text2":{"coloralt": "black","content": "q", "pos": "1"},
+    "text3":{"coloralt": "black","content": "q", "pos": "1"}
 },
 "w": { 
     "id": "w",
     "posx": "1",
     "posy": "0",
     "color": "sepia(100%) saturate(255%) brightness(255%) hue-rotate(20deg)",
-    "coloralt": "black",
-    "layer": "2"
+    "layer": "2",
+    "text0":{"coloralt": "black","content": "w", "pos": "1"},
+    "text1":{"coloralt": "black","content": "q", "pos": "1"},
+    "text2":{"coloralt": "black","content": "q", "pos": "1"},
+    "text3":{"coloralt": "black","content": "q", "pos": "1"}
 },
 "e": {
    "id": "e",	
@@ -29,7 +35,11 @@ var myJSON= {"myObject": {
    "posy": "0",
    "color": "sepia(100%) saturate(255%) brightness(255%) hue-rotate(20deg)",
    "coloralt": "black",
-   "layer": "2"
+   "layer": "2",
+   "text0":{"coloralt": "black","content": "q", "pos": "1"},
+   "text1":{"coloralt": "black","content": "q", "pos": "1"},
+   "text2":{"coloralt": "black","content": "q", "pos": "1"},
+   "text3":{"coloralt": "black","content": "e", "pos": "1"}
 }
 }
 }
@@ -38,6 +48,15 @@ var myJSON= {"myObject": {
 function setbrush(brsh, aspct) {
 brush = brsh;
 aspect = aspct;
+}
+
+function editable text(on){
+//if(on = "true"){
+//text.setAttribute contenteditable="true"
+	
+//}
+
+	
 }
 function update(reload, jsonedit, key_) {
 
@@ -93,7 +112,7 @@ function update(reload, jsonedit, key_) {
 	  	  button.style.width = u2;
  		  //button.style.background = currentKey.color;
                   bg.style.filter = currentKey.color;
-		  text.style.color = currentKey.coloralt;
+		  text.style.color = currentKey.text0.coloralt;
 
 	 }
 
