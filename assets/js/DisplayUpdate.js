@@ -8,8 +8,6 @@ var u2 = "58px";
 
 var myJSON= {"myObject": {
 "q": {
-    "id": "q",
-    "path": "json/data.json",
     "posx": "0",
     "posy": "0",
     "color": "sepia(100%) saturate(255%) brightness(255%) hue-rotate(20deg)",
@@ -17,8 +15,6 @@ var myJSON= {"myObject": {
     "layer": "2"
 },
 "w": { 
-    "id": "w",
-    "path": "json/data1.json",
     "posx": "1",
     "posy": "0",
     "color": "sepia(100%) saturate(255%) brightness(255%) hue-rotate(20deg)",
@@ -26,8 +22,6 @@ var myJSON= {"myObject": {
     "layer": "2"
 },
 "e": {
-   "id": "e",
-   "path": "json/data2.json",
    "posx": "2", 
    "posy": "0",
    "color": "sepia(100%) saturate(255%) brightness(255%) hue-rotate(20deg)",
@@ -71,10 +65,10 @@ function update(reload, jsonedit, key_) {
  		  button.id = currentKey.id;
 		  button.setAttribute("onclick","update('false', 'true','" + key + "')");
 
-		  content.textContent=currentKey.id.toString();
-		  content.id=currentKey.id.concat("text");
+		  content.textContent=currentKey.toString();
+		  content.id=currentKey.toString()+"text";
 		  content.style.marginLeft = u/3+"px";
-		  bg.id=currentKey.id.concat("im");
+		  bg.id=currentKey.toString()+"im";;
 		  bg.setAttribute("src","https://github.com/OskarMeeks/test-site/blob/main/images/key.png?raw=true");
 		  bg.style.width = u2;
 		  bg.style.zIndex = "-1";
