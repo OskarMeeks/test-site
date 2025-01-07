@@ -13,7 +13,8 @@ var myJSON= {"myObject": {
     "posx": "0",
     "posy": "0",
     "color": "sepia(100%) saturate(255%) brightness(255%) hue-rotate(20deg)",
-    "coloralt": "black"
+    "coloralt": "black",
+    "layer": "2"
 },
 "w": { 
     "id": "w",
@@ -21,7 +22,8 @@ var myJSON= {"myObject": {
     "posx": "1",
     "posy": "0",
     "color": "sepia(100%) saturate(255%) brightness(255%) hue-rotate(20deg)",
-    "coloralt": "black"
+    "coloralt": "black",
+    "layer": "2"
 },
 "e": {
    "id": "e",
@@ -29,7 +31,8 @@ var myJSON= {"myObject": {
    "posx": "2", 
    "posy": "0",
    "color": "sepia(100%) saturate(255%) brightness(255%) hue-rotate(20deg)",
-   "coloralt": "black"
+   "coloralt": "black",
+   "layer": "2"
 }
 }
 }
