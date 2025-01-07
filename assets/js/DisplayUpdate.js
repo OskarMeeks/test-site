@@ -38,13 +38,13 @@ var myJSON= {"myObject": {
    "color": "sepia(100%) saturate(255%) brightness(255%) hue-rotate(20deg)",
    "coloralt": "black",
    "layer": "2",
-   "text0":{"coloralt": "black","content": "q", "pos": "1"},
-   "text1":{"coloralt": "black","content": "q", "pos": "1"},
-   "text2":{"coloralt": "black","content": "q", "pos": "1"},
-   "text3":{"coloralt": "black","content": "e", "pos": "1"}
+   "text0":{"coloralt":"black","content":"e", "pos":"1"},
+   "text1":{"coloralt":"black","content":"q", "pos":"1"},
+   "text2":{"coloralt":"black","content":"q", "pos":"1"},
+   "text3":{"coloralt":"black","content":"e", "pos":"1"}
 }
 }
-}
+};
 
 
 function setbrush(brsh, aspct) {
