@@ -12,7 +12,7 @@ var myJSON= {"myObject": {
     "path": "json/data.json",
     "posx": "0",
     "posy": "0",
-    "color": "180deg",
+    "color": "sepia(100%) saturate(255%) brightness(255%) hue-rotate(20deg)",
     "coloralt": "black"
 },
 "w": { 
@@ -20,7 +20,7 @@ var myJSON= {"myObject": {
     "path": "json/data1.json",
     "posx": "1",
     "posy": "0",
-    "color": "20deg",
+    "color": "sepia(100%) saturate(255%) brightness(255%) hue-rotate(20deg)",
     "coloralt": "black"
 },
 "e": {
@@ -28,7 +28,7 @@ var myJSON= {"myObject": {
    "path": "json/data2.json",
    "posx": "2", 
    "posy": "0",
-   "color": "240deg",
+   "color": "sepia(100%) saturate(255%) brightness(255%) hue-rotate(20deg)",
    "coloralt": "black"
 }
 }
@@ -92,7 +92,7 @@ function update(reload, jsonedit, key_) {
  		  button.style.height = u2;
 	  	  button.style.width = u2;
  		  //button.style.background = currentKey.color;
-                  bg.style.filter = "sepia(100%) saturate(255%) brightness(255%) hue-rotate("+currentKey.color+")";
+                  bg.style.filter = currentKey.color;
 		  text.style.color = currentKey.coloralt;
 
 	 }
