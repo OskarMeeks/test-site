@@ -69,7 +69,7 @@ function reloader(reloads){
 	for (var key in myJSON)
 	{
 		//into current key
-		var currentKey = json[key];
+		var currentKey = myJSON[key];
 		
 		//creates keys and sets constants
 	     if(reloads == "true"){
