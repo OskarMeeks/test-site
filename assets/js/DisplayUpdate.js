@@ -55,7 +55,7 @@ function update(reload, clickedkey){
 	else{
 	myJSON["myObject"][clickedkey][aspect1][aspect2] = brush;
 	}
-
+        selectedkey = clicketkey
 	reloader(reload);
 }
 //called when editing properties pannel                       uses saved key, immediate defined aspects and value
