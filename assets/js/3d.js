@@ -34,7 +34,7 @@ loader.load(
     //If the file is loaded, add it to the scene
     object = gltf.scene;
 
-    object.material.color.setHex(0xff0000);
+    //object.material.color.setHex(0xff0000);
     camera.position.z = 5;
 	  
     scene.add(object);
