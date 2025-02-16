@@ -3,8 +3,8 @@
 
 			//import * as THREE from 'three';
 			import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
-			import Stats from './stats.module.js';
-			import { GUI } from './lil-gui.module.min.js';
+			import Stats from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/libs/stats.module.js";
+			import { GUI } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/libs/lil-gui.module.min.js";
 			import { OrbitControls } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/controls/OrbitControls.js";
 
 			let camera, scene, renderer, controls, stats;
