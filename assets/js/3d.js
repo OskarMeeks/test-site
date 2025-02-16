@@ -51,7 +51,7 @@ const renderer = new THREE.WebGLRenderer({ alpha: true }); //Alpha: true allows 
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 //Add the renderer to the DOM
-document.getElementById("container3D").appendChild(renderer.domElement);
+document.getElementById("container3D").appendChild(effect.domElement);
 
 //Set how far the camera will be from the 3D model
 camera.position.z = objToRender === "dino" ? 25 : 500;
@@ -70,27 +70,16 @@ scene.add(ambientLight);
 				effect.domElement.style.color = 'white';
 				effect.domElement.style.backgroundColor = 'black';
 
+
 //This adds controls to the camera, so we can rotate / zoom it with the mouse
 if (objToRender === "dino") {
   controls = new OrbitControls(camera, renderer.domElement);
-
-  
 }
 
 //Render the scene
 function animate() {
   requestAnimationFrame(animate);
-  //Here we could add some code to update the scene, adding some automatic movement
-
-  //Make the eye move
-  if (object && objToRender === "eye") {
-    //I've played with the constants here until it looked good 
-    object.rotation.y = -3 + mouseX / window.innerWidth * 3;
-    object.rotation.x = -1.2 + mouseY * 2.5 / window.innerHeight;
-  }
   renderer.render(scene, camera);
-
-  
 }
 
 //Add a listener to the window, so we can resize the window and the camera
