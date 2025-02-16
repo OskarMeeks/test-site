@@ -19,7 +19,7 @@ let mouseY = window.innerHeight / 2;
 let object;
 
 //OrbitControls allow the camera to move around the scene
-let controls, effect;
+let controls;
 
 //Set which object to render
 let objToRender = 'dino';
@@ -44,8 +44,8 @@ loader.load(
     console.error(error);
   }
 );
-innit();
-function innit(){
+//innit();
+//function innit(){
 	//Instantiate a new renderer and set its size
 	const renderer = new THREE.WebGLRenderer({ alpha: true }); //Alpha: true allows for the transparent background
 	renderer.setSize(window.innerWidth, window.innerHeight);
@@ -69,7 +69,7 @@ function innit(){
 	if (objToRender === "dino") {
 	  controls = new OrbitControls(camera, renderer.domElement);
 	}
-}
+//}
 //Render the scene
 function animate() {
   requestAnimationFrame(animate);
