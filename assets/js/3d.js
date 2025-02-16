@@ -5,6 +5,8 @@ import { OrbitControls } from "https://cdn.skypack.dev/three@0.129.0/examples/js
 // To allow for importing the .gltf file
 import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js";
 
+			import { AsciiEffect } from 'three/addons/effects/AsciiEffect.js';
+
 //Create a Three.JS Scene
 const scene = new THREE.Scene();
 //create a new camera with positions and angles
@@ -63,9 +65,16 @@ scene.add(topLight);
 const ambientLight = new THREE.AmbientLight(0x333333, objToRender === "dino" ? 5 : 1);
 scene.add(ambientLight);
 
+				effect = new AsciiEffect( renderer, ' .:-+*=%@#', { invert: true } );
+				effect.setSize( window.innerWidth, window.innerHeight );
+				effect.domElement.style.color = 'white';
+				effect.domElement.style.backgroundColor = 'black';
+
 //This adds controls to the camera, so we can rotate / zoom it with the mouse
 if (objToRender === "dino") {
   controls = new OrbitControls(camera, renderer.domElement);
+
+  
 }
 
 //Render the scene
@@ -80,6 +89,8 @@ function animate() {
     object.rotation.x = -1.2 + mouseY * 2.5 / window.innerHeight;
   }
   renderer.render(scene, camera);
+
+  
 }
 
 //Add a listener to the window, so we can resize the window and the camera
@@ -97,3 +108,5 @@ document.onmousemove = (e) => {
 
 //Start the 3D rendering
 animate();
+
+
