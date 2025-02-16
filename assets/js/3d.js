@@ -32,36 +32,13 @@ loader.load(
   `./models/${objToRender}/scene.gltf`,
   function (gltf) {
     //If the file is loaded, add it to the scene
-  //  object = gltf.scene;
+    object = gltf.scene;
 
-
-	//camera.position.z = 5;
+    object.material.color.setHex(0xff0000);
+    camera.position.z = 5;
 	  
-//    scene.add(object);
-	  gltf.scene.traverse( function ( child ) {
+    scene.add(object);
 
-						if ( child.isMesh ) {
-
-							// glTF currently supports only tangent-space normal maps.
-							// this model has been modified to demonstrate the use of an object-space normal map.
-
-							child.material.normalMapType = THREE.ObjectSpaceNormalMap;
-
-							// attribute normals are not required with an object-space normal map. remove them.
-
-							child.geometry.deleteAttribute( 'normal' );
-
-							//
-
-							child.material.side = THREE.DoubleSide;
-
-							child.scale.multiplyScalar( 0.5 );
-
-							// recenter
-
-							new THREE.Box3().setFromObject( child ).getCenter( child.position ).multiplyScalar( - 1 );
-
-							scene.add( child );
 
 							
   }
