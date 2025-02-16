@@ -20,7 +20,7 @@ let mouseY = window.innerHeight / 2;
 let object;
 
 //OrbitControls allow the camera to move around the scene
-let controls;
+let controls, effect;
 
 //Set which object to render
 let objToRender = 'dino';
