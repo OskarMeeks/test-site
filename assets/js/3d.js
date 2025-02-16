@@ -1,8 +1,8 @@
 
 //  `./models/${objToRender}/scene.gltf`
 
-			import * as THREE from 'three';
-
+			//import * as THREE from 'three';
+			import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
 			import Stats from 'three/addons/libs/stats.module.js';
 			import { GUI } from 'three/addons/libs/lil-gui.module.min.js';
 			import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
