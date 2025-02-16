@@ -34,14 +34,13 @@ loader.load(
     //If the file is loaded, add it to the scene
     object = gltf.scene;
 
-	const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-	const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-	const cube = new THREE.Mesh(object, material );
 
 
 camera.position.z = 5;
 	  
-    scene.add(cube);
+    scene.add(object);
+
+	    const object.material.color.set(new THREE.Color(0xff0000)); // Sets the color to red (hexadecimal)
   },
   function (xhr) {
     //While it is loading, log the progress
