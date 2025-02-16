@@ -79,7 +79,8 @@ if (objToRender === "dino") {
 //Render the scene
 function animate() {
   requestAnimationFrame(animate);
-  renderer.render(scene, camera);
+  //renderer.render(scene, camera);
+  effect.render( scene, camera );
 }
 
 //Add a listener to the window, so we can resize the window and the camera
