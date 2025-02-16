@@ -41,6 +41,14 @@ loader.load(
 
 
 							
+  },
+  function (xhr) {
+    //While it is loading, log the progress
+    console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+  },
+  function (error) {
+    //If there is an error, log it
+    console.error(error);
   }
 );
 //innit();
