@@ -33,7 +33,15 @@ loader.load(
   function (gltf) {
     //If the file is loaded, add it to the scene
     object = gltf.scene;
-    scene.add(object);
+
+	const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+	const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+	const cube = new THREE.Mesh(object, material );
+
+
+camera.position.z = 5;
+	  
+    scene.add(cube);
   },
   function (xhr) {
     //While it is loading, log the progress
