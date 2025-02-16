@@ -41,14 +41,6 @@ loader.load(
 
 
 							
-  },
-  function (xhr) {
-    //While it is loading, log the progress
-    console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-  },
-  function (error) {
-    //If there is an error, log it
-    console.error(error);
   }
 );
 //innit();
@@ -71,7 +63,7 @@ loader.load(
 
 	const ambientLight = new THREE.AmbientLight(0x333333, objToRender === "dino" ? 5 : 1);
 	scene.add(ambientLight);
-	 object.material.color.setHex(0xff0000); // Sets the color to red (hexadecimal)
+
 
 	//This adds controls to the camera, so we can rotate / zoom it with the mouse
 	if (objToRender === "dino") {
