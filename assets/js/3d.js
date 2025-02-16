@@ -40,7 +40,7 @@ camera.position.z = 5;
 	  
     scene.add(object);
 
-	    const object.material.color.set(new THREE.Color(0xff0000)); // Sets the color to red (hexadecimal)
+	 object.material.color.set(new THREE.Color(0xff0000)); // Sets the color to red (hexadecimal)
   },
   function (xhr) {
     //While it is loading, log the progress
