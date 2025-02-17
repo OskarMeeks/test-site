@@ -30,7 +30,7 @@ var myJSON= {"myObject": {
 }
 };
 
-var u = 2;
+var u = 1;
 var u2 = "2px";
 			//import * as THREE from 'three';
 			import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
@@ -64,7 +64,7 @@ var u2 = "2px";
 				light.position.set( 0, 1, 0 );
 				scene.add( light );
 
-				const geometry = new THREE.IcosahedronGeometry( 0.5, 3 );
+				const geometry = new THREE.BoxGeometry( 0.5, 3 );
 				const material = new THREE.MeshPhongMaterial( { color: 0xffffff } );
 
 				mesh = new THREE.InstancedMesh( geometry, material, count );
