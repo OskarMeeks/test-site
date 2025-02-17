@@ -1,6 +1,37 @@
 
 //  `./models/${objToRender}/scene.gltf`
 
+var myJSON= {"myObject": {
+"q": {
+    "id": "q",
+    "posx": "0",
+    "posy": "0",
+    "color": "sepia(100%) saturate(255%) brightness(255%) hue-rotate(20deg)",
+    "layer": "2",
+    "text0":{"coloralt":"black","content":"q","pos":"1",font:"Monico"}
+},
+"w": { 
+    "id": "w",
+    "posx": "1",
+    "posy": "0",
+    "color": "sepia(100%) saturate(255%) brightness(255%) hue-rotate(20deg)",
+    "layer": "2",
+    "text0":{"coloralt":"black","content":"w","pos":"1",font:"Monico"}
+},
+"e": {
+   "id": "e",	
+   "posx": "2", 
+   "posy": "0",
+   "color": "sepia(100%) saturate(255%) brightness(255%) hue-rotate(20deg)",
+   "coloralt": "black",
+   "layer": "2",
+   "text0":{"coloralt":"black","content":"e","pos":"1",font:"Monico"}
+    }
+}
+};
+
+var u = 80;
+var u2 = "78px";
 			//import * as THREE from 'three';
 			import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
 			import { OrbitControls } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/controls/OrbitControls.js";
@@ -43,25 +74,37 @@
 
 				const matrix = new THREE.Matrix4();
 
-				for ( let x = 0; x < amount; x ++ ) {
+				//for ( let x = 0; x < amount; x ++ ) {
+//
+				//	for ( let y = 0; y < amount; y ++ ) {
+//
+					//	for ( let z = 0; z < amount; z ++ ) {
 
-					for ( let y = 0; y < amount; y ++ ) {
+					//		matrix.setPosition( offset - x, offset - y, offset - z );
+//
+					//		mesh.setMatrixAt( i, matrix );
+					//		mesh.setColorAt( i, color );
 
-						for ( let z = 0; z < amount; z ++ ) {
+					//		i ++;
 
-							matrix.setPosition( offset - x, offset - y, offset - z );
+						//}
 
+					//}
+
+				//}
+
+					for (var key in json){
+						  var currentKey = json[key];
+						  const space = parseInt(currentKey.posx) * u;
+						
+							matrix.setPosition(space, 1, 1);
 							mesh.setMatrixAt( i, matrix );
 							mesh.setColorAt( i, color );
+						i++;
+					{
 
-							i ++;
 
-						}
-
-					}
-
-				}
-
+				
 				scene.add( mesh );
 
 				//
@@ -131,7 +174,5 @@
 				}
 
 				renderer.render( scene, camera );
-
-				//stats.update();
 
 			}
