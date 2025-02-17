@@ -165,7 +165,7 @@ loader.load(
 
 				mouse.x = ( (event.pageX-193) / (window.innerWidth-400)) * 2 - 1;
 				mouse.y = (- ( (event.pageY-500) / window.innerHeight/1.2) * 2 + 1);
-				console.log(mouse.y);
+				//console.log(mouse.y);
 			}
 
 			function animate() {
