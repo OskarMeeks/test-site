@@ -102,7 +102,7 @@
 				event.preventDefault();
 
 				mouse.x = ( (event.pageX-193) / (window.innerWidth-400)) * 2 - 1;
-				mouse.y = (- ( event.pageY+50 / window.innerHeight) * 2 + 1);
+				mouse.y = (- ( event.page-50 / window.innerHeight) * 2 + 1);
 				console.log(mouse.y);
 			}
 
