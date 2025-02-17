@@ -49,7 +49,7 @@ import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/l
 
 			const color = new THREE.Color();
 			const white = new THREE.Color().setHex( 0xffffff );
-
+			const loader = new GLTFLoader();
 
 loader.load(
   `./models/eye/scene.gltf`,
