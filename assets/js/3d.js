@@ -30,8 +30,8 @@ var myJSON= {"myObject": {
 }
 };
 
-var u = 80;
-var u2 = "78px";
+var u = 2;
+var u2 = "2px";
 			//import * as THREE from 'three';
 			import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
 			import { OrbitControls } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/controls/OrbitControls.js";
@@ -120,8 +120,8 @@ var u2 = "78px";
 				document.getElementById("container3D").appendChild(renderer.domElement);
 				controls = new OrbitControls( camera, renderer.domElement );
 				controls.enableDamping = true;
-				controls.enableZoom = false;
-				controls.enablePan = false;
+				controls.enableZoom = true;
+				controls.enablePan = true;
 
 				//stats = new Stats();
 				//document.body.appendChild( stats.dom );
