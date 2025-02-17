@@ -30,7 +30,7 @@ var myJSON= {"myObject": {
 }
 };
 
-var u = 1;
+var u = 1.05;
 var u2 = "2px";
 			//import * as THREE from 'three';
 			import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
