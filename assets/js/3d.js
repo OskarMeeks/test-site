@@ -101,7 +101,7 @@ var u2 = "78px";
 							mesh.setMatrixAt( i, matrix );
 							mesh.setColorAt( i, color );
 						i++;
-					{
+					}
 
 
 				
