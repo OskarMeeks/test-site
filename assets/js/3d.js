@@ -30,7 +30,7 @@ var myJSON= {"myObject": {
 }
 };
 
-var u = 1.05;
+var u = 1.1;
 var u2 = "2px";
 			//import * as THREE from 'three';
 			import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
@@ -50,7 +50,26 @@ var u2 = "2px";
 			const color = new THREE.Color();
 			const white = new THREE.Color().setHex( 0xffffff );
 
-			init();
+
+loader.load(
+  `./models/eye/scene.gltf`,
+  function (gltf) {
+    //If the file is loaded, add it to the scene
+    object = gltf.scene;
+    init();
+  },
+  function (xhr) {
+    //While it is loading, log the progress
+    console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+  },
+  function (error) {
+    //If there is an error, log it
+    console.error(error);
+  }
+);
+
+
+			
 
 			function init() {
 
@@ -64,7 +83,7 @@ var u2 = "2px";
 				light.position.set( 0, 1, 0 );
 				scene.add( light );
 
-				const geometry = new THREE.BoxGeometry( 1, 1 );
+				const geometry = object;//new THREE.BoxGeometry( 1, 1 );
 				const material = new THREE.MeshPhongMaterial( { color: 0xffffff } );
 
 				mesh = new THREE.InstancedMesh( geometry, material, count );
