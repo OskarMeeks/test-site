@@ -92,7 +92,7 @@ var u2 = "78px";
 					//}
 
 				//}
-
+				        var json = myJSON["myObject"];
 					for (var key in json){
 						  var currentKey = json[key];
 						  const space = parseInt(currentKey.posx) * u;
