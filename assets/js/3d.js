@@ -83,7 +83,7 @@ loader.load(
 				light.position.set( 0, 1, 0 );
 				scene.add( light );
 
-				const geometry = new THREE.object.geometry.clone()//BoxGeometry( 1, 1 );
+				const geometry = object.geometry.clone()//new THREE.BoxGeometry( 1, 1 );
 				const material = new THREE.MeshPhongMaterial( { color: 0xffffff } );
 
 				mesh = new THREE.InstancedMesh( geometry, material, count );
