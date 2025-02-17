@@ -71,7 +71,7 @@
 
 				renderer = new THREE.WebGLRenderer( { antialias: true } );
 				renderer.setPixelRatio( window.devicePixelRatio );
-				renderer.setSize( window.innerWidth, window.innerHeight );
+				renderer.setSize( window.innerWidth/1.2, window.innerHeight/1.2 );
 				renderer.setAnimationLoop( animate );
 			//	document.body.appendChild( renderer.domElement );
 				document.getElementById("container3D").appendChild(renderer.domElement);
