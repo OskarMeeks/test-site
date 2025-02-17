@@ -32,8 +32,8 @@
 				renderer.setPixelRatio( window.devicePixelRatio );
 				renderer.setSize( window.innerWidth, window.innerHeight );
 				renderer.setAnimationLoop( animate );
-				document.body.appendChild( renderer.domElement );
-
+				//document.body.appendChild( renderer.domElement );
+                                    document.getElementById("container3D").appendChild(renderer.domElement);
 				//
 
 				window.addEventListener( 'resize', onWindowResize );
