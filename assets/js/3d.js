@@ -101,7 +101,7 @@
 
 				event.preventDefault();
 
-				mouse.x = ( event.pageX + (window.innerWidth/2) );
+				mouse.x = ( event.pageX);
 				mouse.y = - ( event.pageY);
 
 			}
