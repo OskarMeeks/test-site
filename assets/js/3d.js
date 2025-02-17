@@ -81,7 +81,7 @@
 				controls.enablePan = false;
 
 				//stats = new Stats();
-				document.body.appendChild( stats.dom );
+				//document.body.appendChild( stats.dom );
 
 				window.addEventListener( 'resize', onWindowResize );
 				document.addEventListener( 'mousemove', onMouseMove );
