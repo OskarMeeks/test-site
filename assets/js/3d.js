@@ -9,7 +9,7 @@ var myJSON= {"myObject": {
     "color": "#FFFFFF",
     "layer": "2",
     "text0":{"coloralt":"black","content":"q","pos":"1",font:"Monico"},
-    "instance": ""
+    "instance": "0"
 },
 "w": { 
     "id": "w",
@@ -18,7 +18,7 @@ var myJSON= {"myObject": {
     "color": "#FFFFFF",
     "layer": "2",
     "text0":{"coloralt":"black","content":"w","pos":"1",font:"Monico"},
-	"instance": ""
+	"instance": "1"
 },
 "e": {
    "id": "e",	
@@ -28,7 +28,7 @@ var myJSON= {"myObject": {
    "coloralt": "black",
    "layer": "2",
    "text0":{"coloralt":"black","content":"e","pos":"1",font:"Monico"},
-	"instance": ""
+	"instance": "2"
     }
 }
 };
@@ -113,6 +113,7 @@ loader.load(
 							mesh.setMatrixAt( i, matrix );
 							mesh.setColorAt( i, color );
 							mesh.name = myJSON["myObject"][key].id;
+					         	myJSON["myObject"][key].instance = mesh.instanceId;
 						//	console.log(mesh.name);
 						i++;
 					}
@@ -169,22 +170,40 @@ loader.load(
 					const instanceId = intersection[ 0 ].instanceId;
 
 					mesh.getColorAt( instanceId, color );
-
-					if ( color.equals( white ) ) {
-
-						mesh.setColorAt( instanceId, color.setHex( Math.random() * 0xffffff ) );
-
-						mesh.instanceColor.needsUpdate = true;
-
+					myJSON["myObject"][clickedkey][aspect1] = brush
+					//finds the key that was clicked by id
+					for(var key in myJSON["myObject"])
+					{
+						//update the json file
+    					    if(myJSON["myObject"][key].instance == instanceId ){
+						
+						if(aspect2 == "none")
+						{
+						myJSON["myObject"][key][aspect1] = brush;
+						}
+						else{
+						myJSON["myObject"][key][aspect1][aspect2] = brush;
+						}
+						renderer.render( scene, camera );
+						uppdate(instanceId);
+					    }
 					}
+					
+				//	if ( color.equals( white ) ) {
 
-				}
+				//		mesh.setColorAt( instanceId, color.setHex( Math.random() * 0xffffff ) );
+
+			//			mesh.instanceColor.needsUpdate = true;
+
+			//		}
+
+				//}
 
 				renderer.render( scene, camera );
 
 			}
 
-var brush = "grey";
+var brush = "0xaaffaa";
 var aspect1 = "color";
 var aspect2;
 
@@ -196,15 +215,9 @@ aspect2 = aspct2;
 
 //called when clicking on a key to quick apply a style     uses saved value and aspect, imediately defined key
 function update(clickedkey){
-	if(aspect2 == "none")
-	{
-	myJSON["myObject"][clickedkey][aspect1] = brush;
-	}
-	else{
-	myJSON["myObject"][clickedkey][aspect1][aspect2] = brush;
-	}
-        selectedkey = clickedkey;
-	//reloader();
+	mesh.setColorAt( clickedkey, color.setHex(myJSON["myObject"][clickedkey][color]) );
+	mesh.instanceColor.needsUpdate = true;
+
 }
 function updateall(){
 	for(var key in myJSON["myObject"])
