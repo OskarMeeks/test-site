@@ -128,7 +128,7 @@ loader.load(
 
 				window.addEventListener( 'resize', onWindowResize );
 				document.addEventListener( 'mousemove', onMouseMove );
-
+				reloader();
 			}
 
 			function onWindowResize() {
@@ -174,7 +174,7 @@ loader.load(
 				}
 
 				renderer.render( scene, camera );
-reloader();
+
 			}
 
 var brush = "grey";
