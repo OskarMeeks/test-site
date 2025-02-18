@@ -237,12 +237,12 @@ function reloader(){
 		//instancedMesh.getMatrixAt(instanceId, matrix);
 		// console.log(myJSON["myObject"][key].color);
 
-		var object2 = scene.getObjectByName(key.toString(), true);
-				console.log(object2.name);
-		const newColor = new THREE.Color();
-		newColor.set(myJSON["myObject"][key].color);
-		object2.material.color = newColor;
-		object2.material.needsUpdate = true;
+		//var object2 = scene.getObjectByName(key.toString(), true);
+		//		console.log(object2.name);
+		//const newColor = new THREE.Color();
+		//newColor.set(myJSON["myObject"][key].color);
+		//object2.material.color = newColor;
+		//object2.material.needsUpdate = true;
 		i++;
 		renderer.render( scene, camera );
 	}
