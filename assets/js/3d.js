@@ -56,9 +56,9 @@ loader.load(
   `./models/untitled.glb`,
   function (gltf) {
     //If the file is loaded, add it to the scene
-    object = gltf.scene.getObjectByName( '1' );
+   // object = gltf.scene.getObjectByName( '1' );
     init();
-    reloader();
+   // reloader();
   },
   function (xhr) {
     //While it is loading, log the progress
@@ -130,7 +130,7 @@ loader.load(
 				window.addEventListener( 'resize', onWindowResize );
 				document.addEventListener( 'mousemove', onMouseMove );
 				
-
+				 reloader();
 			}
 
 			function onWindowResize() {
@@ -199,7 +199,7 @@ function update(clickedkey){
 	myJSON["myObject"][clickedkey][aspect1][aspect2] = brush;
 	}
         selectedkey = clickedkey;
-	reloader();
+	//reloader();
 }
 function updateall(){
 	for(var key in myJSON["myObject"])
@@ -214,7 +214,7 @@ function updateall(){
 		}
 	
 		}
-	reloader();
+	//reloader();
 }
 function reloader(){
 	let i = 0;
@@ -226,7 +226,7 @@ function reloader(){
 		//instancedMesh.getMatrixAt(instanceId, matrix);
 		// console.log(myJSON["myObject"][key].color);
 
-		var object2 = gltf.scene.getObjectByName(key.toString(), true);
+		var object2 = scene.getObjectByName(key.toString(), true);
 				console.log(object2.name);
 		const newColor = new THREE.Color();
 		newColor.set(myJSON["myObject"][key].color);
