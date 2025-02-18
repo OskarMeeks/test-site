@@ -6,7 +6,7 @@ var myJSON= {"myObject": {
     "id": "q",
     "posx": "0",
     "posy": "0",
-    "color": "0xFFFFFF",
+    "color": "#FFFFFF",
     "layer": "2",
     "text0":{"coloralt":"black","content":"q","pos":"1",font:"Monico"}
 },
@@ -14,7 +14,7 @@ var myJSON= {"myObject": {
     "id": "w",
     "posx": "1",
     "posy": "0",
-    "color": "0xFFFFFF",
+    "color": "#FFFFFF",
     "layer": "2",
     "text0":{"coloralt":"black","content":"w","pos":"1",font:"Monico"}
 },
@@ -22,7 +22,7 @@ var myJSON= {"myObject": {
    "id": "e",	
    "posx": "2", 
    "posy": "0",
-   "color": "0xFFFFFF",
+   "color": "#FFFFFF",
    "coloralt": "black",
    "layer": "2",
    "text0":{"coloralt":"black","content":"e","pos":"1",font:"Monico"}
