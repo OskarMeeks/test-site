@@ -107,7 +107,7 @@ loader.load(
 							mesh.setMatrixAt( i, matrix );
 							mesh.setColorAt( i, color );
 							mesh.name = key.toString();
-							console.log(mesh.name);
+							//console.log(mesh.name);
 						i++;
 					}
 
@@ -128,7 +128,11 @@ loader.load(
 
 				window.addEventListener( 'resize', onWindowResize );
 				document.addEventListener( 'mousemove', onMouseMove );
-				reloader();
+				//reloader();
+
+				gltf.scene.traverse(function(child){
+				    console.log(child.name);
+				});
 			}
 
 			function onWindowResize() {
@@ -223,7 +227,7 @@ function reloader(){
 		//const matrix = new THREE.Matrix4();
 		//instancedMesh.getMatrixAt(instanceId, matrix);
 		// console.log(myJSON["myObject"][key].color);
-		console.log(key.toString());
+		//console.log(key.toString());
 		var object2 = scene.getObjectByName(key.toString(), true);
 		const newColor = new THREE.Color();
 		newColor.set(myJSON["myObject"][key].color);
