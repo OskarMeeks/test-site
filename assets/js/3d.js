@@ -237,7 +237,7 @@ function reloader(){
 		
 		const matrix = new THREE.Matrix4();
 		
-		// console.log(myJSON["myObject"][key].color);
+		 console.log(myJSON["myObject"][key].color);
 
 		//var object2 = instancedMesh.getMatrixAt(i, matrix);
 		//		console.log(object2.name);
