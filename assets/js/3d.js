@@ -50,8 +50,8 @@ import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/l
 			const raycaster = new THREE.Raycaster();
 			const mouse = new THREE.Vector2( 1, 1 );
 
-			const color = new THREE.Color().setHex( 0xFA8072 );
-			const white = new THREE.Color().setHex( 0xFA8072 );
+			const color = new THREE.Color()
+			const white = new THREE.Color().setHex( 0xffffff );
 			const loader = new GLTFLoader();
 
 //const instanceData = []; // Array to store data related to each instance
