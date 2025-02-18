@@ -108,7 +108,7 @@ loader.load(
 							mesh.setMatrixAt( i, matrix );
 							mesh.setColorAt( i, color );
 							mesh.name = key.toString();
-							console.log(mesh.name);
+						//	console.log(mesh.name);
 						i++;
 					}
 
@@ -218,6 +218,17 @@ function updateall(){
 }
 function reloader(){
 	let i = 0;
+
+	scene.traverse((child) => {
+
+	    if (child.isMesh) {
+
+        console.log(child.name); // Log the name of each mesh in the scene
+
+       }
+
+});
+	
 	for(var key in myJSON["myObject"])
 	{
 		//mesh.setColorAt( i, myJSON["myObject"][key].color);
