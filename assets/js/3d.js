@@ -217,7 +217,9 @@ aspect2 = aspct2;
 
 //called when clicking on a key to quick apply a style     uses saved value and aspect, imediately defined key
 function update(keyid, keylocation){
-	mesh.setColorAt(keyid, myJSON["myObject"][keylocation].color );  
+	//mesh.setColorAt(keyid, myJSON["myObject"][keylocation].color );  
+        mesh.setColorAt(keyid, new THREE.Color("rgb(100%, 0%, 0%)"));  
+	
 	//mesh.setColorAt( clickedkey, color.setHex(0xaaffaa )) ;
 	mesh.instanceColor.needsUpdate = true;
 	console.log(myJSON["myObject"][keylocation].color);
