@@ -79,12 +79,12 @@ loader.load(
 
 				scene = new THREE.Scene();
 
-				const light = new THREE.HemisphereLight( 0xffffff, 0x888888, 3 );
+				const light = new THREE.HemisphereLight( 0xffffff, 0x888888, 2 );
 				light.position.set( 0, 1, 0 );
 				scene.add( light );
 
 				const geometry = object.geometry.scale(60,60,60);//new THREE.BoxGeometry( 1, 1 );
-				const material = new THREE.MeshPhongMaterial( { color: 0xffffff } );
+				const material = new THREE.MeshPhongMaterial( { color: 0xFA8072 } );
 				
 
 
