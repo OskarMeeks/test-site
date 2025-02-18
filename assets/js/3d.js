@@ -51,6 +51,7 @@ import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/l
 			const white = new THREE.Color().setHex( 0xFA8072 );
 			const loader = new GLTFLoader();
 			let object;
+let object2;
 loader.load(
   `./models/untitled.glb`,
   function (gltf) {
@@ -223,11 +224,11 @@ function reloader(){
 		//instancedMesh.getMatrixAt(instanceId, matrix);
 		// console.log(myJSON["myObject"][key].color);
 		console.log(key.toString());
-		const object = scene.getObjectByName(key.toString(), true);
+		var object2 = scene.getObjectByName(key.toString(), true);
 		const newColor = new THREE.Color();
 		newColor.set(myJSON["myObject"][key].color);
-		object.material.color = newColor;
-		object.material.needsUpdate = true;
+		object2.material.color = newColor;
+		object2.material.needsUpdate = true;
 		i++;
 		renderer.render( scene, camera );
 	}
