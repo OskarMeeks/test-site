@@ -243,7 +243,7 @@ function reloader(){
 		//		console.log(object2.name);
 		const newColor = new THREE.Color();
 		newColor.set(myJSON["myObject"][key].color);
-                mesh.setColorAt(instanceId, newColor);
+                mesh.setColorAt(i, newColor);
 		mesh.instanceColor.needsUpdate = true;
 		i++;
 		renderer.render( scene, camera );
