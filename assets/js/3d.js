@@ -83,7 +83,7 @@ loader.load(
 				light.position.set( 0, 1, 0 );
 				scene.add( light );
 
-				const geometry = object.geometry.scale(75,75,75);//new THREE.BoxGeometry( 1, 1 );
+				const geometry = object.geometry.scale(60,60,60);//new THREE.BoxGeometry( 1, 1 );
 				const material = new THREE.MeshPhongMaterial( { color: 0xffffff } );
 				
 
@@ -92,7 +92,7 @@ loader.load(
 				
 					mesh.rotation.x = 0;
 					mesh.rotation.y = 90;
-					mesh.rotation.z = 0;
+					mesh.rotation.z = 90;
 				
 				let i = 0;
 				const offset = ( amount - 1 ) / 2;
