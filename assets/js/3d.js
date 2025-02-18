@@ -224,7 +224,7 @@ function updateall(){
 function reloader(){
 	let i = 0;
 
-	scene.traverse((child) => {
+	mesh.traverse((child) => {
 
 	    if (child.isInstancedMesh) {
 
