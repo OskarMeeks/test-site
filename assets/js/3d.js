@@ -172,22 +172,23 @@ loader.load(
 					mesh.getColorAt( instanceId, color );
 					//myJSON["myObject"][clickedkey][aspect1] = brush
 					//finds the key that was clicked by id
-					for(var key in myJSON["myObject"])
-					{
+				//	for(var key in myJSON["myObject"])
+					//{
 						//update the json file
-    					    if(myJSON["myObject"][key].instance == instanceId ){
+    					//    if(myJSON["myObject"][key].instance == instanceId ){
 						
-						if(aspect2 == "none")
-						{
-						myJSON["myObject"][key][aspect1] = brush;
-						}
-						else{
-						myJSON["myObject"][key][aspect1][aspect2] = brush;
-						}
-						renderer.render( scene, camera );
+					//	if(aspect2 == "none")
+					//	{
+						//myJSON["myObject"][key][aspect1] = brush;
+					//	}
+					//	else{
+						//myJSON["myObject"][key][aspect1][aspect2] = brush;
+						//}
+				
+					
+					//    }
+				//	}
 						uppdate(instanceId);
-					    }
-					}
 					
 				//	if ( color.equals( white ) ) {
 
