@@ -216,7 +216,7 @@ aspect1 = aspct1;
 aspect2 = aspct2;	
 }
 
-//called when clicking on a key to quick apply a style     uses saved value and aspect, imediately defined key
+//runs every animate frame, is called once for each key
 function update(keyid, keylocation){
 	mesh.setColorAt(keyid, new THREE.Color(myJSON["myObject"][keylocation].color) );  
     //    mesh.setColorAt(keyid, new THREE.Color());  
