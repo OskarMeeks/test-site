@@ -205,7 +205,7 @@ loader.load(
 
 			}
 
-var brush = "#aaffaa";
+var brush = "rgb(100%, 0%, 0%)";
 var aspect1 = "color";
 var aspect2;
 
@@ -217,8 +217,8 @@ aspect2 = aspct2;
 
 //called when clicking on a key to quick apply a style     uses saved value and aspect, imediately defined key
 function update(keyid, keylocation){
-	//mesh.setColorAt(keyid, myJSON["myObject"][keylocation].color );  
-        mesh.setColorAt(keyid, new THREE.Color("rgb(100%, 0%, 0%)"));  
+	mesh.setColorAt(keyid, new THREE.Color(myJSON["myObject"][keylocation].color) );  
+    //    mesh.setColorAt(keyid, new THREE.Color());  
 	
 	//mesh.setColorAt( clickedkey, color.setHex(0xaaffaa )) ;
 	mesh.instanceColor.needsUpdate = true;
