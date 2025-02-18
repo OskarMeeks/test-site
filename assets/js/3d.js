@@ -113,7 +113,7 @@ loader.load(
 							mesh.setMatrixAt( i, matrix );
 							mesh.setColorAt( i, color );
 							mesh.name = myJSON["myObject"][key].id;
-					         	myJSON["myObject"][key].instance = mesh.instanceId;
+					         	//myJSON["myObject"][key].instance = mesh.instanceId;
 						//	console.log(mesh.name);
 						i++;
 					}
@@ -174,12 +174,13 @@ loader.load(
 					//finds the key that was clicked by id
 					for(var key in myJSON["myObject"])
 					{
-						//update the json file
+						//update the json file         checks only for instanceid colided with
     					    if(myJSON["myObject"][key].instance == instanceId ){
 						
 						if(aspect2 == "none")
 						{
 						myJSON["myObject"][key][aspect1] = brush;
+						console.log(brush);
 						}
 						else{
 						myJSON["myObject"][key][aspect1][aspect2] = brush;
@@ -222,7 +223,7 @@ function update(keyid, keylocation){
 	
 	//mesh.setColorAt( clickedkey, color.setHex(0xaaffaa )) ;
 	mesh.instanceColor.needsUpdate = true;
-	console.log(myJSON["myObject"][keylocation].color);
+	//console.log(myJSON["myObject"][keylocation].color);
 
 }
 function updateall(){
@@ -232,6 +233,7 @@ function updateall(){
 		if(aspect2 == "none")
 		{
 		myJSON["myObject"][key][aspect1] = brush;
+		
 		}
 		else{
 		myJSON["myObject"][key][aspect1][aspect2] = brush;
