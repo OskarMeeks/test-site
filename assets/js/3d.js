@@ -112,7 +112,7 @@ loader.load(
 							matrix.setPosition(1, spacex, 1);
 							mesh.setMatrixAt( i, matrix );
 							mesh.setColorAt( i, color );
-							//instanceData[i] = key; // Use instance ID as the index
+							mesh.name = myJSON["myObject"][key];
 						//	console.log(mesh.name);
 						i++;
 					}
@@ -228,7 +228,7 @@ function reloader(){
 
 	    if (child.isMesh) {
 
-        console.log(child.instanceId); // Log the name of each mesh in the scene
+        console.log(child.name); // Log the name of each mesh in the scene
 
        }
 
