@@ -83,7 +83,7 @@ loader.load(
 				light.position.set( 0, 1, 0 );
 				scene.add( light );
 
-				const geometry = object.geometry.scale(100,100,100);//new THREE.BoxGeometry( 1, 1 );
+				const geometry = object.geometry.scale(75,75,75);//new THREE.BoxGeometry( 1, 1 );
 				const material = new THREE.MeshPhongMaterial( { color: 0xffffff } );
 
 				mesh = new THREE.InstancedMesh( geometry, material, count );
@@ -114,9 +114,9 @@ loader.load(
 				        var json = myJSON["myObject"];
 					for (var key in json){
 						  var currentKey = json[key];
-						  const space = parseInt(currentKey.posx) * u;
+						  const spacex = parseInt(currentKey.posx) * u;
 						
-							matrix.setPosition(space, 1, 1);
+							matrix.setPosition(1, spacex, 1);
 							mesh.setMatrixAt( i, matrix );
 							mesh.setColorAt( i, color );
 							
