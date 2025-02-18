@@ -207,7 +207,7 @@ loader.load(
 
 var brush = "rgb(100%, 0%, 0%)";
 var aspect1 = "color";
-var aspect2;
+var aspect2 = "none";
 
 function setbrush(brsh, aspct1, aspct2) {
 brush = brsh;
