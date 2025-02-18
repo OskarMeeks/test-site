@@ -224,13 +224,13 @@ function updateall(){
 function reloader(){
 	let i = 0;
 
-	mesh.traverse((child) => {
+	scene.traverse((child) => {
 
 	    if (child.isInstancedMesh) {
 
-        console.log(child.name); // Log the name of each mesh in the scene
+        console.log(child.instanceId); // Log the name of each mesh in the scene
 
-       }
+         }
 
 });
 	
