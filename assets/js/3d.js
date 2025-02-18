@@ -172,23 +172,24 @@ loader.load(
 					mesh.getColorAt( instanceId, color );
 					//myJSON["myObject"][clickedkey][aspect1] = brush
 					//finds the key that was clicked by id
-				//	for(var key in myJSON["myObject"])
-					//{
+					for(var key in myJSON["myObject"])
+					{
 						//update the json file
-    					//    if(myJSON["myObject"][key].instance == instanceId ){
+    					    if(myJSON["myObject"][key].instance == instanceId ){
 						
-					//	if(aspect2 == "none")
-					//	{
-						//myJSON["myObject"][key][aspect1] = brush;
-					//	}
-					//	else{
-						//myJSON["myObject"][key][aspect1][aspect2] = brush;
-						//}
+						if(aspect2 == "none")
+						{
+						myJSON["myObject"][key][aspect1] = brush;
+						}
+						else{
+						myJSON["myObject"][key][aspect1][aspect2] = brush;
+						}
 				
 					
-					//    }
-				//	}
-						update(instanceId);
+					    }
+							update(instanceId, key);
+					}
+					
 					
 				//	if ( color.equals( white ) ) {
 
@@ -215,8 +216,8 @@ aspect2 = aspct2;
 }
 
 //called when clicking on a key to quick apply a style     uses saved value and aspect, imediately defined key
-function update(clickedkey){
-	mesh.setColorAt( clickedkey, color.setHex(myJSON["myObject"][clickedkey][color]) );  
+function update(keyid, keylocation){
+	mesh.setColorAt(keyid, color.setHex(myJSON["myObject"][keylocation][color]) );  
 	//mesh.setColorAt( clickedkey, color.setHex(0xaaffaa )) ;
 	mesh.instanceColor.needsUpdate = true;
 	console.log("1");
