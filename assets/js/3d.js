@@ -105,7 +105,7 @@ loader.load(
 							matrix.setPosition(1, spacex, 1);
 							mesh.setMatrixAt( i, matrix );
 							mesh.setColorAt( i, color );
-							//mesh.name(key);
+							mesh.name = key.toString();
 						i++;
 					}
 
@@ -217,7 +217,16 @@ function reloader(){
 	for(var key in myJSON["myObject"])
 	{
 		//mesh.setColorAt( i, myJSON["myObject"][key].color);
+		
+		//const matrix = new THREE.Matrix4();
+		//instancedMesh.getMatrixAt(instanceId, matrix);
 		 console.log(myJSON["myObject"][key].color);
+
+		const object = scene.getObjectByName(key.toString());
+		const newColor = new THREE.Color();
+		newColor.set(myJSON["myObject"][key].color);
+		object.material.color = newColor;
+		object.material.needsUpdate = true;
 		i++;
 		renderer.render( scene, camera );
 	}
