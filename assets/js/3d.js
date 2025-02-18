@@ -130,9 +130,6 @@ loader.load(
 				document.addEventListener( 'mousemove', onMouseMove );
 				//reloader();
 
-				gltf.scene.traverse(function(child){
-				    console.log(child.name);
-				});
 			}
 
 			function onWindowResize() {
@@ -228,7 +225,7 @@ function reloader(){
 		//instancedMesh.getMatrixAt(instanceId, matrix);
 		// console.log(myJSON["myObject"][key].color);
 		//console.log(key.toString());
-		var object2 = scene.getObjectByName(key.toString(), true);
+		var object2 = gltf.scene.getObjectByName(key.toString(), true);
 		const newColor = new THREE.Color();
 		newColor.set(myJSON["myObject"][key].color);
 		object2.material.color = newColor;
