@@ -206,7 +206,7 @@ loader.load(
 
 			}
 
-var brush = "rgb(100%, 0%, 0%)";
+var brush = "rgb(100%, 100%, 0%)";
 var aspect1 = "color";
 var aspect2 = "none";
 
