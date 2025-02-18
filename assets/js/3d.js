@@ -90,7 +90,7 @@ loader.load(
 
 				mesh = new THREE.InstancedMesh( geometry, material, count );
 				
-					mesh.rotation.x = 1-;
+					mesh.rotation.x = -1;
 					mesh.rotation.y = 0;
 					mesh.rotation.z = 0;
 				
