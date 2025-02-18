@@ -55,7 +55,7 @@ loader.load(
   `./models/untitled.glb`,
   function (gltf) {
     //If the file is loaded, add it to the scene
-    object = gltf.scene;
+    object = gltf.scene.getObjectByName( '1' );
     init();
   },
   function (xhr) {
