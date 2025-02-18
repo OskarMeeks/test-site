@@ -58,6 +58,7 @@ loader.load(
     //If the file is loaded, add it to the scene
     object = gltf.scene.getObjectByName( '1' );
     init();
+    reloader();
   },
   function (xhr) {
     //While it is loading, log the progress
@@ -128,7 +129,7 @@ loader.load(
 
 				window.addEventListener( 'resize', onWindowResize );
 				document.addEventListener( 'mousemove', onMouseMove );
-				//reloader();
+				
 
 			}
 
