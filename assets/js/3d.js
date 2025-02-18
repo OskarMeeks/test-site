@@ -220,7 +220,7 @@ function update(keyid, keylocation){
 	mesh.setColorAt(keyid, color.setHex(myJSON["myObject"][keylocation][color]) );  
 	//mesh.setColorAt( clickedkey, color.setHex(0xaaffaa )) ;
 	mesh.instanceColor.needsUpdate = true;
-	console.log("1");
+	console.log(color.setHex(myJSON["myObject"][keylocation][color].toString());
 
 }
 function updateall(){
