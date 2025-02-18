@@ -105,7 +105,7 @@ loader.load(
 							matrix.setPosition(1, spacex, 1);
 							mesh.setMatrixAt( i, matrix );
 							mesh.setColorAt( i, color );
-							mesh.name(key);
+							//mesh.name(key);
 						i++;
 					}
 
