@@ -48,7 +48,7 @@ import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/l
 			const mouse = new THREE.Vector2( 1, 1 );
 
 			const color = new THREE.Color();
-			const white = new THREE.Color().setHex( 0xffffff );
+			const white = new THREE.Color().setHex( 0xFA8072 );
 			const loader = new GLTFLoader();
 			let object;
 loader.load(
