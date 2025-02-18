@@ -106,7 +106,7 @@ loader.load(
 							mesh.setMatrixAt( i, matrix );
 							mesh.setColorAt( i, color );
 							mesh.name = key.toString();
-							console.log(mesh.name());
+							console.log(mesh.name);
 						i++;
 					}
 
