@@ -136,7 +136,7 @@ loader.load(
 				window.addEventListener( 'resize', onWindowResize );
 				document.addEventListener( 'mousemove', onMouseMove );
 				
-				 reloader();
+				// reloader();
 			}
 
 			function onWindowResize() {
