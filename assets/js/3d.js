@@ -216,7 +216,7 @@ function reloader(){
 	let i = 0;
 	for(var key in myJSON["myObject"])
 	{
-		mesh.setColorAt( i, json[key].color);
+		mesh.setColorAt( i, myJSON["myObject"][key].color);
 		i++;
 		renderer.render( scene, camera );
 	}
