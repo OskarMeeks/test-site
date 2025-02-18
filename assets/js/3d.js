@@ -216,7 +216,7 @@ aspect2 = aspct2;
 //called when clicking on a key to quick apply a style     uses saved value and aspect, imediately defined key
 function update(clickedkey){
 	//mesh.setColorAt( clickedkey, color.setHex(myJSON["myObject"][clickedkey][color]) );
-	mesh.setColorAt( clickedkey, color.setHex( Math.random() * 0xffffff ) ;
+	mesh.setColorAt( clickedkey, color.setHex( Math.random() * 0xffffff )) ;
 	mesh.instanceColor.needsUpdate = true;
 	console.log("1");
 
