@@ -213,6 +213,7 @@ function updateall(){
 	reloader();
 }
 function reloader(){
+	let i = 0;
 	for(var key in myJSON["myObject"])
 	{
 		mesh.setColorAt( i, json[key].color);
