@@ -226,7 +226,7 @@ function reloader(){
 
 	mesh.traverse((child) => {
 
-	    if (child.isMesh) {
+	    if (child.isInstancedMesh) {
 
         console.log(child.name); // Log the name of each mesh in the scene
 
