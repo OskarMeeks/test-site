@@ -112,7 +112,7 @@ loader.load(
 							matrix.setPosition(1, spacex, 1);
 							mesh.setMatrixAt( i, matrix );
 							mesh.setColorAt( i, color );
-							mesh.name = myJSON["myObject"][key];
+							mesh.name = myJSON["myObject"][key].id;
 						//	console.log(mesh.name);
 						i++;
 					}
