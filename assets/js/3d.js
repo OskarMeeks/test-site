@@ -242,7 +242,7 @@ function reloader(){
 		//var object2 = instancedMesh.getMatrixAt(i, matrix);
 		//		console.log(object2.name);
 		const newColor = new THREE.Color();
-		newColor.set(myJSON["myObject"][key].color);
+		newColor.set(myJSON["myObject"][key].color.toString());
                 mesh.setColorAt(i, newColor);
 		mesh.instanceColor.needsUpdate = true;
 		i++;
