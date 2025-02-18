@@ -86,13 +86,14 @@ loader.load(
 				const geometry = object.geometry.scale(75,75,75);//new THREE.BoxGeometry( 1, 1 );
 				const material = new THREE.MeshPhongMaterial( { color: 0xffffff } );
 				
-					geometry.rotation.x = 90;
-					geometry.rotation.y = 0;
-					geometry.rotation.z = 0;
-				
+
 
 				mesh = new THREE.InstancedMesh( geometry, material, count );
-
+				
+					mesh.rotation.x = 90;
+					mesh.rotation.y = 0;
+					mesh.rotation.z = 0;
+				
 				let i = 0;
 				const offset = ( amount - 1 ) / 2;
 
