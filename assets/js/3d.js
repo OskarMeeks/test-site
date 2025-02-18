@@ -6,7 +6,7 @@ var myJSON= {"myObject": {
     "id": "q",
     "posx": "0",
     "posy": "0",
-    "color": "0xaaffaa",
+    "color": "#aaffaa",
     "layer": "2",
     "text0":{"coloralt":"black","content":"q","pos":"1",font:"Monico"},
     "instance": "0"
@@ -15,7 +15,7 @@ var myJSON= {"myObject": {
     "id": "w",
     "posx": "1",
     "posy": "0",
-    "color": "#0xaaffaa",
+    "color": "#aaffaa",
     "layer": "2",
     "text0":{"coloralt":"black","content":"w","pos":"1",font:"Monico"},
 	"instance": "1"
@@ -24,7 +24,7 @@ var myJSON= {"myObject": {
    "id": "e",	
    "posx": "2", 
    "posy": "0",
-   "color": "#0xaaffaa",
+   "color": "#aaffaa",
    "coloralt": "black",
    "layer": "2",
    "text0":{"coloralt":"black","content":"e","pos":"1",font:"Monico"},
@@ -216,7 +216,7 @@ aspect2 = aspct2;
 
 //called when clicking on a key to quick apply a style     uses saved value and aspect, imediately defined key
 function update(clickedkey){
-	mesh.setColorAt( clickedkey, color.setHex(myJSON["myObject"][clickedkey][color]) );   //       current issue is that clicked key is only a index not a name
+	mesh.setColorAt( clickedkey, color.setHex(myJSON["myObject"][clickedkey][color]) );  
 	//mesh.setColorAt( clickedkey, color.setHex(0xaaffaa )) ;
 	mesh.instanceColor.needsUpdate = true;
 	console.log("1");
