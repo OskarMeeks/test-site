@@ -188,7 +188,7 @@ loader.load(
 					
 					//    }
 				//	}
-						uppdate(instanceId);
+						update(instanceId);
 					
 				//	if ( color.equals( white ) ) {
 
