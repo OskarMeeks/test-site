@@ -170,7 +170,7 @@ loader.load(
 					const instanceId = intersection[ 0 ].instanceId;
 
 					mesh.getColorAt( instanceId, color );
-					myJSON["myObject"][clickedkey][aspect1] = brush
+					//myJSON["myObject"][clickedkey][aspect1] = brush
 					//finds the key that was clicked by id
 					for(var key in myJSON["myObject"])
 					{
