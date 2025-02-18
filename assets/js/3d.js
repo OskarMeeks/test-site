@@ -50,6 +50,8 @@ import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/l
 			const color = new THREE.Color().setHex( 0xFA8072 );
 			const white = new THREE.Color().setHex( 0xFA8072 );
 			const loader = new GLTFLoader();
+
+//const instanceData = []; // Array to store data related to each instance
 			let object;
 let object2;
 loader.load(
@@ -107,7 +109,7 @@ loader.load(
 							matrix.setPosition(1, spacex, 1);
 							mesh.setMatrixAt( i, matrix );
 							mesh.setColorAt( i, color );
-							mesh.name = key.toString();
+							//instanceData[i] = key; // Use instance ID as the index
 						//	console.log(mesh.name);
 						i++;
 					}
@@ -233,15 +235,15 @@ function reloader(){
 	{
 		//mesh.setColorAt( i, myJSON["myObject"][key].color);
 		
-		//const matrix = new THREE.Matrix4();
-		//instancedMesh.getMatrixAt(instanceId, matrix);
+		const matrix = new THREE.Matrix4();
+		
 		// console.log(myJSON["myObject"][key].color);
 
-		//var object2 = scene.getObjectByName(key.toString(), true);
-		//		console.log(object2.name);
+		var object2 = instancedMesh.getMatrixAt(i, matrix);
+				console.log(object2.name);
 		//const newColor = new THREE.Color();
 		//newColor.set(myJSON["myObject"][key].color);
-		//object2.material.color = newColor;
+                 mesh.setColorAt(instanceId, newColor);
 		//object2.material.needsUpdate = true;
 		i++;
 		renderer.render( scene, camera );
