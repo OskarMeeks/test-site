@@ -90,9 +90,9 @@ loader.load(
 
 				mesh = new THREE.InstancedMesh( geometry, material, count );
 				
-					mesh.rotation.x = 0;
-					mesh.rotation.y = 180;
-					mesh.rotation.z = 90;
+					mesh.rotation.x = 1-;
+					mesh.rotation.y = 0;
+					mesh.rotation.z = 0;
 				
 				let i = 0;
 				const offset = ( amount - 1 ) / 2;
