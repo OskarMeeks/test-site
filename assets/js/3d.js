@@ -8,7 +8,8 @@ var myJSON= {"myObject": {
     "posy": "0",
     "color": "#FFFFFF",
     "layer": "2",
-    "text0":{"coloralt":"black","content":"q","pos":"1",font:"Monico"}
+    "text0":{"coloralt":"black","content":"q","pos":"1",font:"Monico"},
+    "instance": ""
 },
 "w": { 
     "id": "w",
@@ -16,7 +17,8 @@ var myJSON= {"myObject": {
     "posy": "0",
     "color": "#FFFFFF",
     "layer": "2",
-    "text0":{"coloralt":"black","content":"w","pos":"1",font:"Monico"}
+    "text0":{"coloralt":"black","content":"w","pos":"1",font:"Monico"},
+	"instance": ""
 },
 "e": {
    "id": "e",	
@@ -25,7 +27,8 @@ var myJSON= {"myObject": {
    "color": "#FFFFFF",
    "coloralt": "black",
    "layer": "2",
-   "text0":{"coloralt":"black","content":"e","pos":"1",font:"Monico"}
+   "text0":{"coloralt":"black","content":"e","pos":"1",font:"Monico"},
+	"instance": ""
     }
 }
 };
@@ -225,7 +228,7 @@ function reloader(){
 
 	    if (child.isMesh) {
 
-        console.log(child.name); // Log the name of each mesh in the scene
+        console.log(child.instanceId); // Log the name of each mesh in the scene
 
        }
 
