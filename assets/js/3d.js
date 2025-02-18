@@ -92,7 +92,7 @@ loader.load(
 				
 					mesh.rotation.x = 0;
 					mesh.rotation.y = Math.PI / 2;
-					mesh.rotation.z = Math.PI / 6;
+					mesh.rotation.z = (Math.PI / 2)*3;
 				
 				let i = 0;
 				const offset = ( amount - 1 ) / 2;
