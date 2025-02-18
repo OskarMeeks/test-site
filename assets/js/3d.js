@@ -197,7 +197,7 @@ loader.load(
 
 			//		}
 
-				//}
+				}
 
 				renderer.render( scene, camera );
 
