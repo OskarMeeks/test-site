@@ -106,6 +106,7 @@ loader.load(
 							mesh.setMatrixAt( i, matrix );
 							mesh.setColorAt( i, color );
 							mesh.name = key.toString();
+							debug.log(mesh.name());
 						i++;
 					}
 
@@ -220,7 +221,7 @@ function reloader(){
 		
 		//const matrix = new THREE.Matrix4();
 		//instancedMesh.getMatrixAt(instanceId, matrix);
-		 console.log(myJSON["myObject"][key].color);
+		// console.log(myJSON["myObject"][key].color);
 
 		const object = scene.getObjectByName(key.toString());
 		const newColor = new THREE.Color();
