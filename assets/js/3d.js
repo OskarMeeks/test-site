@@ -119,6 +119,7 @@ loader.load(
 							matrix.setPosition(space, 1, 1);
 							mesh.setMatrixAt( i, matrix );
 							mesh.setColorAt( i, color );
+							mesh.scale(100,100,100);
 						i++;
 					}
 
