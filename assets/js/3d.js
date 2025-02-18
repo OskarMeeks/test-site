@@ -52,7 +52,7 @@ import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/l
 			const loader = new GLTFLoader();
 			let object;
 loader.load(
-  `./models/eye/scene.gltf`,
+  `./models/untitled.glb`,
   function (gltf) {
     //If the file is loaded, add it to the scene
     object = gltf.scene;
